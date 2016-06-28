@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <include src="inc/meta.html">Ticket</include>
+</head>
+<body>
+<div class="site-container">
+    <include src="inc/header.html"></include>
+
+    <main class="ticket-page" role="main">
+
+        <section class="module module--select-show">
+            <header>
+                <div class="container">
+                    <a href="#" class="button button--home">BACK TO HOMEPAGE</a>
+                    <ul class="step-by-step">
+                        <li class="active"><a href="javascript:void(0);">1. Select Show</a></li>
+                        <li><a href="javascript:void(0);">2. Select Tickets</a></li>
+                        <li><a href="javascript:void(0);">3. Buy Tickets</a></li>
+                    </ul>
+                    <div class="countdown"></div>
+                </div>
+            </header>
+            <div class="module--content">
+                <div class="container">
+
+                    <div class="step">
+                        <div class="inner">
+                            <span>
+                                1. <br/> Select Show
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="bamboo-box">
+                        <div class="form-field">
+                            <div class="input-group">
+                                <select name="select-show" class="input-control">
+                                    <option value="">Select Show</option>
+                                    <option>Lang Toi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <div class="input-group">
+                                <select name="select-city" class="input-control">
+                                    <option value="">Select City</option>
+                                    <option>Ho Noi</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="show-results">
+                        <div class="nav-monthly">
+                            <a class="prev" href="javascript:void(0);"></a>
+                            <span class="current"> JUNE 2016</span>
+                            <a class="next" href="javascript:void(0);"></a>
+                        </div>
+                        <ul class="weekdays">
+                            <li>MON</li>
+                            <li>TUE</li>
+                            <li>WED</li>
+                            <li>THU</li>
+                            <li>FRI</li>
+                            <li>SAT</li>
+                            <li>SUN</li>
+                        </ul>
+                        <ul class="calender">
+                            <li class="calender--date calender--date--other week-1"></li>
+                            <li class="calender--date calender--date--other week-1"></li>
+                            <li class="calender--date calender--date--no-show week-1">
+                                <div class="date"><span class="weekday">WED</span>1</div>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-1">
+                                <div class="date"><span class="weekday">THU</span>2</div>
+                            </li>
+                            <li class="calender--date calender--date--has-show week-1">
+                                <div class="date"><span class="weekday">FRI</span>3</div>
+                                <ul>
+                                    <li>
+                                        <h4>A O Show</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="calender--date calender--date--has-show week-1">
+                                <div class="date"><span class="weekday">SAT</span>4</div>
+                                <ul>
+                                    <li>
+                                        <h4>A O Show</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>14:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="calender--date calender--date--has-show week-1">
+                                <div class="date"><span class="weekday">SUN</span>5</div>
+                                <ul>
+                                    <li class="lang-toi">
+                                        <h4>Lang Toi</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>9:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>14:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 950.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="calender--date calender--date-current calender--date--has-show week-2">
+                                <div class="date"><span class="weekday">MON</span>6</div>
+                                <ul>
+                                    <li>
+                                        <h4>A O Show</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>14:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>A O Show</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>14:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>22:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-2">
+                                <div class="date"><span class="weekday">TUE</span>7</div>
+                            </li>
+                            <li class="calender--date calender--date--has-show week-2">
+                                <div class="date"><span class="weekday">WED</span>8</div>
+                                <ul>
+                                    <li>
+                                        <h4>A O Show</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>14:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>22:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-2">
+                                <div class="date"><span class="weekday">THU</span>9</div>
+                            </li>
+                            <li class="calender--date calender--date--has-show week-2">
+                                <div class="date"><span class="weekday">FRI</span>10</div>
+                                <ul>
+                                    <li>
+                                        <h4>A O Show</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="calender--date calender--date--has-show week-2">
+                                <div class="date"><span class="weekday">SAT</span>11</div>
+                                <ul>
+                                    <li>
+                                        <h4>A O Show</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>14:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-2">
+                                <div class="date"><span class="weekday">SUN</span>12</div>
+                            </li>
+                            <li class="calender--date calender--date--has-show week-3">
+                                <div class="date"><span class="weekday">MON</span>13</div>
+                                <ul>
+                                    <li>
+                                        <h4>A O Show</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>14:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                    <li class="the-mist">
+                                        <h4>The Mist</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>14:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>22:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-3">
+                                <div class="date"><span class="weekday">TUE</span>14</div>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-3">
+                                <div class="date"><span class="weekday">WED</span>15</div>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-3">
+                                <div class="date"><span class="weekday">THU</span>16</div>
+                            </li>
+                            <li class="calender--date calender--date--has-show week-3">
+                                <div class="date"><span class="weekday">FRI</span>17</div>
+                                <ul>
+                                    <li>
+                                        <h4>A O Show</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-3">
+                                <div class="date"><span class="weekday">SAT</span>18</div>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-3">
+                                <div class="date"><span class="weekday">SUN</span>19</div>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-4">
+                                <div class="date"><span class="weekday">MON</span>20</div>
+                            </li>
+                            <li class="calender--date calender--date--has-show week-4">
+                                <div class="date"><span class="weekday">TUE</span>21</div>
+                                <ul>
+                                    <li>
+                                        <h4>A O Show</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>14:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-4">
+                                <div class="date"><span class="weekday">WED</span>22</div>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-4">
+                                <div class="date"><span class="weekday">THU</span>23</div>
+                            </li>
+                            <li class="calender--date calender--date--has-show week-4">
+                                <div class="date"><span class="weekday">FRI</span>24</div>
+                                <ul>
+                                    <li class="lang-toi">
+                                        <h4>Lang Toi</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-4">
+                                <div class="date"><span class="weekday">SAT</span>25</div>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-4">
+                                <div class="date"><span class="weekday">SUN</span>26</div>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-5">
+                                <div class="date"><span class="weekday">MON</span>27</div>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-5">
+                                <div class="date"><span class="weekday">TUE</span>28</div>
+                            </li>
+                            <li class="calender--date calender--date--has-show week-5">
+                                <div class="date"><span class="weekday">WED</span>29</div>
+                                <ul>
+                                    <li class="the-mist">
+                                        <h4>The Mist</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>14:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                    <li class="lang-toi">
+                                        <h4>Lang Toi</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>14:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>22:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>A O Show</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>14:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span>22:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 750.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="calender--date calender--date--no-show week-5">
+                                <div class="date"><span class="weekday">THU</span>30</div>
+                            </li>
+                            <li class="calender--date calender--date--has-show week-5">
+                                <div class="date"><span class="weekday">FRI</span>31</div>
+                                <ul>
+                                    <li>
+                                        <h4>A O Show</h4>
+                                        <span class="at">Saigon Opera House</span>
+                                        <p>
+                                            <a href="javascript:void(0);">
+                                                <span>19:00</span>
+                                                <span class="tips">
+                                                    <span>Price</span>
+                                                    <span>From: 630.000</span>
+                                                </span>
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="calender--date calender--date--other week-5"></li>
+                            <li class="calender--date calender--date--other week-5"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="module module--booking">
+            <header>
+                <div class="container">
+                    <a href="#" class="button button--home">BACK TO HOMEPAGE</a>
+                    <ul class="step-by-step">
+                        <li><a href="javascript:void(0);">1. Select Show</a></li>
+                        <li class="active"><a href="javascript:void(0);">2. Select Tickets</a></li>
+                        <li><a href="javascript:void(0);">3. Buy Tickets</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="module--content">
+                <div class="container">
+                    <div class="step">
+                        <div class="inner">
+                            <span>
+                                2. <br/> Select Tickets
+                            </span>
+                        </div>
+                    </div>
+                    <div class="booking-info">
+                        <div class="booking-summary">
+                            <div class="booking-summary--name">
+                                <p>
+                                    <span class="label">Show Name:</span>
+                                    <span class="value">Lang Toi</span>
+                                </p>
+                                <p>
+                                    <span class="label">Venue:</span>
+                                    <span class="value">Hanoi Opera House</span>
+                                </p>
+                                <p>
+                                    <span class="label">Address:</span>
+                                    <span class="value">7 Lam Son Square, District 1, Ho Chi Minh City, Vietnam</span>
+                                </p>
+                                <p>
+                                    <span class="label">Show time:</span>
+                                    <span class="value"><span class="color">12/07/2016 at 18:00</span></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage-zone">
+                        <div class="inner">
+                            <figure class="legend">
+                                <img src="images/legend-hanoi.png" alt=""/>
+                            </figure>
+                            <figure class="seat-status">
+                                <img src="images/seat-status-hanoi.png" alt=""/>
+                            </figure>
+                            <figure class="stage">
+                                <img src="images/stage-hanoi.png" alt=""/>
+                            </figure>
+                        </div>
+                    </div>
+                    <!--div class="stage-zone stage-zone--saigon">
+                        <div class="inner">
+                            <figure class="legend">
+                                <img src="images/legend-saigon.png" alt=""/>
+                            </figure>
+                            <figure class="seat-status">
+                                <img src="images/seat-status-saigon.png" alt=""/>
+                            </figure>
+                            <figure class="stage">
+                                <img src="images/stage-saigon.png" alt=""/>
+                            </figure>
+                        </div>
+                    </div-->
+                    <div class="booking-info booking-info--selecting">
+                        <div class="booking-summary booking-summary--name">
+                            <div class="clearfix">
+                                <h3>You are selecting <span>10 tickets</span></h3>
+                                <div class="booking-summary--selecting">
+                                    <p>
+                                        <span class="label">Floor:</span>
+                                        <span class="value">GROUND FLOOR</span>
+                                    </p>
+                                    <p>
+                                        <span class="label">Zone:</span>
+                                        <span class="value">wow! [W]</span>
+                                    </p>
+                                    <p>
+                                        <span class="label">Seat NO.:</span>
+                                        <span class="value"><span class="color">P19 - P20 - P21 - P22 - P23 - P24 - P25 - P26 - P27 - P28</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="form-field">
+                                    <label class="form-label">Please insert <strong>No. of children</strong> included in your booking to enjoy child policy:</label>
+                                    <div class="input-group">
+                                        <select class="input-control">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-group">
+                                <button class="button">CONFIRM BOOKING</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="module module--confirm-booking">
+            <header>
+                <div class="container">
+                    <a href="#" class="button button--home">BACK TO HOMEPAGE</a>
+                    <ul class="step-by-step">
+                        <li><a href="javascript:void(0);">1. Select Show</a></li>
+                        <li><a href="javascript:void(0);">2. Select Tickets</a></li>
+                        <li class="active"><a href="javascript:void(0);">3. Buy Tickets</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="module--content">
+                <div class="container">
+                    <div class="step">
+                        <div class="inner">
+                            <span>
+                                3. <br/> Buy Tickets
+                            </span>
+                        </div>
+                    </div>
+                    <div class="booking-info">
+                        <div class="booking-summary">
+                            <div class="booking-summary--name">
+                                <p>
+                                    <span class="label">Show Name:</span>
+                                    <span class="value">Lang Toi</span>
+                                </p>
+                                <p>
+                                    <span class="label">Venue:</span>
+                                    <span class="value">Hanoi Opera House</span>
+                                </p>
+                                <p>
+                                    <span class="label">Address:</span>
+                                    <span class="value">7 Lam Son Square, District 1, Ho Chi Minh City, Vietnam</span>
+                                </p>
+                                <p>
+                                    <span class="label">Show time:</span>
+                                    <span class="value"><span class="color">12/07/2016 at 18:00</span></span>
+                                </p>
+                            </div>
+                            <div class="booking-summary--selected">
+                                <p>
+                                    <span class="label">Booked:</span>
+                                    <span class="value"><span class="color">10 Tickets</span> <span class="baby">including 01</span></span>
+                                </p>
+                                <p>
+                                    <span class="label">Floor:</span>
+                                    <span class="value">GROUND FLOOR</span>
+                                </p>
+                                <p>
+                                    <span class="label">Zone:</span>
+                                    <span class="value">wow! [W]</span>
+                                </p>
+                                <p>
+                                    <span class="label">Seat NO.:</span>
+                                    <span class="value"><span class="color">P19 - P20 - P21 - P22 - P23 - P24 - P25 - P26 - P27 - P28</span></span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="payment-info">
+                            <table width="100%" class="mobile">
+                                <tr class="border">
+                                    <th align="left">Programs Applied</th>
+                                    <td>Summer Promotion</td>
+                                </tr>
+                                <tr class="border">
+                                    <th align="left">Offers</th>
+                                    <td>890.000</td>
+                                </tr>
+                                <tr class="border">
+                                    <th align="left">Quantity of Tickets</th>
+                                    <td>2</td>
+                                </tr>
+                                <tr class="border-double">
+                                    <th align="left">Amount</th>
+                                    <td><strong>1.780.000</strong></td>
+                                </tr>
+                                <tr class="border">
+                                    <th align="left">Programs Applied</th>
+                                    <td>Kids 30%</td>
+                                </tr>
+                                <tr class="border">
+                                    <th align="left">Offers</th>
+                                    <td>735.000</td>
+                                </tr>
+                                <tr class="border">
+                                    <th align="left">Quantity of Tickets</th>
+                                    <td>1</td>
+                                </tr>
+                                <tr class="border-double">
+                                    <th align="left">Amount</th>
+                                    <td><strong>735.000</strong></td>
+                                </tr>
+                                <tr class="border-green">
+                                    <th align="left">Total in VND</th>
+                                    <td><strong class="bigger">2.515.000</strong></td>
+                                </tr>
+                                <tr class="border-green">
+                                    <th align="left">Total in USD</th>
+                                    <td><strong class="bigger">112,5</strong></td>
+                                </tr>
+                            </table>
+                            <table width="100%" class="tablet">
+                                <tr class="border-double">
+                                    <th align="left">Programs Applied</th>
+                                    <th>Offers</th>
+                                    <th>Quantity of Tickets</th>
+                                    <th align="right">Amount</th>
+                                </tr>
+                                <tr class="border">
+                                    <td>Summer Promotion</td>
+                                    <td align="center">890.000</td>
+                                    <td align="center">2</td>
+                                    <td align="right"><strong>1.780.000</strong></td>
+                                </tr>
+                                <tr class="border">
+                                    <td>Kids 30%</td>
+                                    <td align="center">735.000</td>
+                                    <td align="center">1</td>
+                                    <td align="right"><strong>735.000</strong></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="border-green">Total in VND</td>
+                                    <td align="right" class="border-green"><strong class="bigger">2.515.000</strong></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td class="border-green">Total in USD</td>
+                                    <td align="right" class="border-green"><strong class="bigger">112,5</strong></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="action-group">
+                            <a href="#" class="button button--bigger">BUY TICKETS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="module module--buy-tickets">
+            <header>
+                <div class="container">
+                    <a href="#" class="button button--home">BACK TO HOMEPAGE</a>
+                    <ul class="step-by-step">
+                        <li><a href="javascript:void(0);">1. Select Show</a></li>
+                        <li><a href="javascript:void(0);">2. Select Tickets</a></li>
+                        <li class="active"><a href="javascript:void(0);">3. Buy Tickets</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="module--content">
+                <div class="container">
+                    <fieldset class="site-form">
+                        <form id="submitPayment">
+                        <div class="form-info form-info--general">
+                            <div class="form-field">
+                                <label class="form-label">Full Name <span>*</span></label>
+                                <div class="input-group">
+                                    <input type="text" name="full-name" class="input-control required"/>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label">Email <span>*</span></label>
+                                <div class="input-group">
+                                    <input type="text" name="email" class="input-control required email"/>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label">Confirm Email <span>*</span></label>
+                                <div class="input-group">
+                                    <input type="text" name="confirmEmail" class="input-control required email"/>
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="form-field form-field--half">
+                                    <label class="form-label">Phone <span>*</span></label>
+                                    <div class="input-group">
+                                        <input type="text" name="phone" class="input-control required"/>
+                                    </div>
+                                </div>
+                                <div class="form-field form-field--half last">
+                                    <label class="form-label">Nationality <span>*</span></label>
+                                    <div class="input-group required">
+                                        <select name="nationality" class="input-control">
+                                            <option value=""></option>
+                                            <option value="vi">Vietnamese</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-info form-info--payment">
+                            <h4 class="form-info--header">Payment Method <span>*</span></h4>
+                            <div class="form-info--content">
+                                <div class="form-field form-field--radio">
+                                    <label class="item">
+                                        <input type="radio" name="card"/>
+                                        <span><span></span>Credit Card</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="card"/>
+                                        <span><span></span>Paypal Account</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="card"/>
+                                        <span><span></span>ATM Card via OnePay</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="card"/>
+                                        <span><span></span>Credit Card via OnePay</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="card"/>
+                                        <span><span></span>Credit Card via Paypal</span>
+                                    </label>
+                                </div>
+                                <div class="form-field form-field--textarea">
+                                    <label class="form-label">Special Request</label>
+                                    <div class="input-group">
+                                        <textarea class="input-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-info form-info--survey">
+                            <h4 class="form-info--header">How do you know about our show?</h4>
+                            <div class="form-info--content">
+                                <div class="form-field form-field--radio">
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Trip Advisor</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Friends' Recommendation</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Online Search</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Tour Guide's Recommendation</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Travel Agency</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Online travel websites / communities </span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Newspapers / Magazines </span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Others (please specify) </span>
+                                        <div class="input-group">
+                                            <input type="text" class="input-control"/>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-info form-info--term">
+                            <div class="form-info--content">
+                                <div class="scroll">
+                                    <p><strong>Online Ticket Payment- Terms & Conditions</strong></p>
+                                    <br/>
+                                    <p>Please take time to read and understand our Terms and Conditions before accessing online ticket payment. By using this website, you agreed to terms and conditions set forth in this document. All terms and conditions are subjected to change from time to time, while their validation is limited at the time of reading. We always expect to deliver the excellent entertainment at the best quality service. The list below is a few guides for online ticket payment.</p>
+                                    <p><strong>1.Subjects of application</strong></p>
+                                    <p>This online payment feature only applies for our assigned shows. Our online membership registration is free of charge. Each online transaction is limited to 8 tickets in maximum. If the number of tickets exceeding maximum permitted per transaction, please contact ……………….. or email to ………………….</p>
+                                    <p><strong>2.	Refunds, cancellation and exchanges</strong></p>
+                                    <p>At the moment of reading, there will no available services for cancellation/return/refund or editing tickets information after successful online payment. We only accept to refund in the condition that booking system history does not indicate customer’s orders while customer’ banking account received a deduce amount through our booking systems, and there was no booking confirmation that is sent to customer. Regarding refunds, please contact us by …….</p>
+                                    <p><strong>1.Subjects of application</strong></p>
+                                    <p>This online payment feature only applies for our assigned shows. Our online membership registration is free of charge. Each online transaction is limited to 8 tickets in maximum. If the number of tickets exceeding maximum permitted per transaction, please contact ……………….. or email to ………………….</p>
+                                    <p><strong>2.	Refunds, cancellation and exchanges</strong></p>
+                                    <p>At the moment of reading, there will no available services for cancellation/return/refund or editing tickets information after successful online payment. We only accept to refund in the condition that booking system history does not indicate customer’s orders while customer’ banking account received a deduce amount through our booking systems, and there was no booking confirmation that is sent to customer. Regarding refunds, please contact us by …….</p>
+                                    <p><strong>1.Subjects of application</strong></p>
+                                    <p>This online payment feature only applies for our assigned shows. Our online membership registration is free of charge. Each online transaction is limited to 8 tickets in maximum. If the number of tickets exceeding maximum permitted per transaction, please contact ……………….. or email to ………………….</p>
+                                    <p><strong>2.	Refunds, cancellation and exchanges</strong></p>
+                                    <p>At the moment of reading, there will no available services for cancellation/return/refund or editing tickets information after successful online payment. We only accept to refund in the condition that booking system history does not indicate customer’s orders while customer’ banking account received a deduce amount through our booking systems, and there was no booking confirmation that is sent to customer. Regarding refunds, please contact us by …….</p>
+                                    <p><strong>1.Subjects of application</strong></p>
+                                    <p>This online payment feature only applies for our assigned shows. Our online membership registration is free of charge. Each online transaction is limited to 8 tickets in maximum. If the number of tickets exceeding maximum permitted per transaction, please contact ……………….. or email to ………………….</p>
+                                    <p><strong>2.	Refunds, cancellation and exchanges</strong></p>
+                                    <p>At the moment of reading, there will no available services for cancellation/return/refund or editing tickets information after successful online payment. We only accept to refund in the condition that booking system history does not indicate customer’s orders while customer’ banking account received a deduce amount through our booking systems, and there was no booking confirmation that is sent to customer. Regarding refunds, please contact us by …….</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-info form-info--action">
+                            <div class="form-field form-field--checkbox">
+                                <label class="item">
+                                    <input type="checkbox" name="agree"/>
+                                    <span><span></span>I have read & agreed to the <a href="javascript:void(0);">Terms and Conditions.</a></span>
+                                </label>
+                            </div>
+                            <div class="action-group">
+                                <button class="button button--bigger">PAY NOW</button>
+                            </div>
+                        </div>
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <include src="inc/footer.html"></include>
+</div>
+
+<include src="inc/scripts.html"></include>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+.message-page{
+    .module--content .container{
+        padding: 75px 0 125px;
+    }
+    h2{
+        font-weight: 300;
+        font-size: 38px;
+        text-align: center;
+        margin: 0 0 35px;
+        @include tablet{
+            font-size: 50px;
+            margin: 0 0 25px;
+        }
+    }
+    .noticed{
+        border: 1px solid #a96929;
+        @include border-radius(5px);
+        max-width: 946px;
+        margin: 0 auto;
+        font-size: 17px;
+        padding: 20px 24px;
+
+        position: relative;
+        &:after{
+            content: '';
+            @include use-sprite('noted');
+
+            position: absolute;
+            bottom: -14px;
+            right: -1px;
+            z-index: 1;
+        }
+
+        p{
+            margin: 10px 0;
+        }
+        a{
+            color: #6e953b;
+        }
+
+        @include tablet{
+            font-size: 20px;
+            padding: 40px 100px;
+            &:after{
+                bottom: -33px;
+                right: 0;
+            }
+        }
+    }
+}

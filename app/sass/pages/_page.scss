@@ -1,0 +1,35 @@
+.module{
+    @include clearfix;
+    header{
+        background-color: #000;
+        height: 41px;
+        @include tablet{
+            height: 62px;
+        }
+        .container{
+            position: relative;
+        }
+    }
+    .countdown{
+        text-align: right;
+        position: absolute;
+        right: 0;
+        top: 2px;
+    }
+}
+.module--content{
+    color: #333;
+    background: image_url('bg-module.jpg');
+    background-size: 100px;
+
+    border-bottom: 4px solid #6e953b;
+    min-height: 400px;
+
+    @include tablet{
+        background-size: auto;
+    }
+}
+
+.button{
+
+}

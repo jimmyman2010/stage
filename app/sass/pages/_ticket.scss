@@ -1,0 +1,817 @@
+.ticket-page{
+  .button--home{
+    float: left;
+    @include tablet{
+      text-indent: -9999px;
+      width: 34px;
+      overflow: hidden;
+      padding: 0;
+      &:before{
+        left: 8px;
+      }
+    }
+  }
+}
+.step-by-step{
+  float: left;
+  margin-left: 25px;
+  @include desktop{
+    margin-left: 55px;
+  }
+  li{
+    float: left;
+    a{
+      display: block;
+      padding: 0 40px;
+      line-height: 41px;
+      position: relative;
+      font-size: 16px;
+      @include tablet{
+        line-height: 62px;
+      }
+      @include desktop{
+        font-size: 19px;
+        padding: 0 75px;
+      }
+      &:after{
+        content: '';
+        height: 2px;
+        display: block;
+        width: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #8dc63f;
+        @include transition(width 0.3s);
+      }
+      &:hover{
+        &:after{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .active{
+    a{
+      color: #8dc63f;
+      &:after{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.site-form{
+  border: none;
+  padding: 20px 0;
+}
+
+.form-info{
+  border: 1px solid #333;
+  @include border-radius(5px);
+  padding: 10px 15px 15px;
+  max-width: 740px;
+  margin:0 auto 20px;
+  @include tablet{
+    padding: 15px 27px 20px;
+  }
+}
+
+.form-field--textarea{
+  @include clearfix;
+  @include tablet{
+    .form-label{
+      float: none;
+      width: auto;
+      margin: 0 0 5px;
+    }
+    .input-group{
+      float: none;
+      width: auto;
+      .input-control{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.form-info--payment{
+  @include clearfix;
+  .form-field--radio{
+    .item{
+      @include tablet {
+        float: left;
+        width: 33.33%;
+      }
+    }
+  }
+}
+
+.form-info--survey{
+  .form-field--radio{
+    .item{
+      @include tablet {
+        float: left;
+        width: 50%;
+      }
+    }
+  }
+}
+
+.form-info--general{
+  border: none;
+  padding: 0;
+  max-width: 552px;
+}
+
+.form-info--term{
+  padding-right: 10px;
+  .scroll{
+    font-size: 12px;
+    max-height: 300px;
+    //overflow-y: scroll;
+    p{
+      margin-bottom: 5px;
+    }
+  }
+
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width: 5px;
+    @include border-radius(5px);
+    background: #8dc63f;
+  }
+  .mCSB_scrollTools .mCSB_draggerRail{
+    width: 5px;
+    @include border-radius(5px);
+    background: #333;
+  }
+}
+
+.form-info--action{
+  padding: 0;
+  border: 0;
+}
+
+.form-info--header{
+  position: relative;
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #ac9668;
+  font-size: 16px;
+  font-weight: 400;
+  span{
+    color: #f92b1f;
+  }
+  &:after{
+    content: '';
+    @include use-sprite('leaf');
+
+    position: absolute;
+    bottom: -8px;
+    right: -9px;
+  }
+  @include tablet{
+    font-size: 19px;
+    &:after{
+      bottom: -11px;
+      right: -14px;
+    }
+  }
+}
+
+
+.booking-info{
+  max-width: 945px;
+  margin: 0 auto;
+  .action-group{
+    margin: 30px 0 20px;
+    @include desktop {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+
+.booking-summary{
+  @include clearfix;
+  color: #d2b58d;
+  background: rgba(#000000, 0.8);
+  padding: 5px 10px;
+  font-size: 13px;
+  @include tablet{
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  @include desktop{
+    max-width: 848px;
+  }
+  .booking-summary--name{
+    @include tablet {
+      float: left;
+      width: percentage(475/848);
+      .label {
+        width: 100px;
+      }
+      .value {
+        width: 341px;
+      }
+    }
+  }
+  .booking-summary--selected{
+    border-top: 1px solid #3f3c35;
+    @include tablet {
+      border-top: none;
+      float: right;
+      width: percentage(340/848);
+      .label {
+        width: 86px;
+      }
+      .value {
+        width: 230px;
+      }
+    }
+  }
+  p{
+    border-top: 1px solid #3f3c35;
+    padding: 5px 0;
+    &:first-child{
+      border-top: none;
+    }
+    .label{
+      display: inline-block;
+      width: 35%;
+    }
+    .value{
+      display: inline-block;
+      width: 63%;
+      .color{
+        color: #8dc63f;
+      }
+    }
+  }
+  .baby{
+    float: right;
+    position: relative;
+    padding-right: 25px;
+    &:after{
+      content: '';
+      @include use-sprite('baby');
+
+      position: absolute;
+      right: -5px;
+      top: -4px;
+    }
+  }
+}
+
+.payment-info{
+  font-size: 16px;
+  margin: 30px 0;
+  @include tablet{
+    font-size: 18px;
+  }
+  table{
+    border-collapse: collapse;
+  }
+  th, td{
+    padding: 5px 10px;
+  }
+  th{
+    font-weight: 700;
+    font-size: 14px;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  .border-double{
+    border-bottom: 2px solid #333;
+  }
+  .border{
+    border-bottom: 1px solid #333;
+  }
+  .border-green{
+    border-bottom: 2px solid #a96929;
+  }
+  .bigger{
+    font-size: 18px;
+    @include tablet {
+      font-size: 22px;
+    }
+  }
+}
+
+table{
+  &.mobile{
+    @include tablet{
+      display: none;
+    }
+  }
+  &.tablet{
+    display: none;
+    @include tablet{
+      display: table;
+    }
+  }
+}
+
+.module--confirm-booking,
+.module--buy-tickets{
+  header{
+    display: none;
+    @include tablet{
+      display: block;
+    }
+  }
+}
+
+.step{
+  text-align: center;
+  padding: 20px;
+  @include tablet{
+    display: none;
+  }
+  .inner{
+    display: inline-block;
+    span {
+      display: table-cell;
+      width: 90px;
+      height: 90px;
+      @include border-radius(50%);
+      background-color: #000;
+      font-size: 14px;
+      color: #8dc63f;
+      padding-bottom: 15px;
+
+      vertical-align: middle;
+    }
+  }
+}
+
+.module--select-show{
+  header .step-by-step{
+    display: none;
+    @include tablet{
+      display: block;
+    }
+  }
+  .module--content .container{
+    padding: 0 0 20px;
+    @include tablet{
+      padding: 20px 0 50px;
+    }
+  }
+}
+
+.bamboo-box{
+  @include tablet{
+    background: image_url('bamboo-box.png') no-repeat;
+    max-width: 556px;
+    min-height: 187px;
+    margin: 0 auto;
+    padding: 58px 98px 0;
+  }
+  .form-field .input-group{
+    width: auto;
+    float: none;
+  }
+}
+
+.show-results{
+
+}
+
+.nav-monthly{
+  margin: 20px 0;
+  border: 1px solid #333;
+  text-align: center;
+  position: relative;
+  font-size: 16px;
+  line-height: 30px;
+  @include tablet{
+    font-size: 22px;
+    line-height: 40px;
+  }
+  a{
+    display: block;
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    &:before{
+      content:'';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -5px 0 0 -3px;
+      @include tablet{
+        margin: -10px 0 0 -5px;;
+      }
+    }
+    &:hover{
+      background-color: #93785c;
+    }
+
+    @include tablet{
+      width: 160px;
+      height: 40px;
+    }
+  }
+  .prev{
+    left: 0;
+    border-right: 1px solid #333;
+    &:before {
+      @include use-sprite('prev');
+    }
+    &:hover {
+      &:before {
+        @include use-sprite('prev-hover');
+      }
+    }
+  }
+  .next{
+    right: 0;
+    border-left: 1px solid #333;
+    &:before {
+      @include use-sprite('next');
+    }
+    &:hover {
+      &:before {
+        @include use-sprite('next-hover');
+      }
+    }
+  }
+}
+
+.weekdays{
+  display: none;
+  @include clearfix;
+  font-size: 18px;
+  @include desktop{
+    display: block;
+  }
+  li{
+    float: left;
+    width: percentage(1/7);
+    padding: 20px 0 5px;
+  }
+}
+
+.calender{
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  font-size: 13px;
+  @include clearfix;
+  @include desktop{
+    font-size: 18px;
+  }
+  .calender--date{
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+    padding: 0 5px 10px 64px;
+    position: relative;
+    min-height: 70px;
+    @include desktop {
+      padding: 26px 10px 10px 40px;
+      float: left;
+      width: percentage(1/7);
+      min-height: 110px;
+      &:nth-child(7n+1) {
+        clear: left;
+      }
+    }
+    .date{
+      border-right: 1px solid #333;
+      border-bottom: 1px solid #333;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      padding: 5px 0;
+      @include desktop{
+        padding: 0;
+        height: 36px;
+        line-height: 36px;
+        width: 36px;
+      }
+      .weekday{
+        display: block;
+        @include desktop{
+          display: none;
+        }
+      }
+    }
+
+    ul{
+      font-size: 12px;
+      @include clearfix;
+    }
+
+    li{
+      float: left;
+      margin-right: 30px;
+      @include desktop{
+        float: none;
+        margin-right: 0;
+      }
+      h4{
+        margin: 10px 0 0;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      a{
+        font-size: 14px;
+        display: inline-block;
+        padding: 0 4px;
+        background-color: #2d803b;
+        margin: 1px 0;
+        @include border-radius(1px);
+        position: relative;
+        color: white;
+        &:hover{
+          .tips{
+            display: block;
+          }
+        }
+      }
+      .tips{
+        display: none;
+        z-index: 1;
+        position: absolute;
+        bottom: 27px;
+        left: 50%;
+        width: 142px;
+        background-color: #2d803b;
+        color: white;
+        padding: 5px 12px;
+        font-size: 14px;
+        @include border-radius(5px 5px 5px 0);
+        span{
+          display: block;
+          padding: 2px 0;
+          &:first-child{
+            border-bottom: 1px solid white;
+          }
+        }
+        &:after{
+          @include triangle(10px, #2d803b, 'top', 10px);
+          border-left: 0;
+
+          position: absolute;
+          top: 100%;
+          left: 0;
+        }
+      }
+      .bottom{
+        bottom: -62px;
+        @include border-radius(0 5px 5px 5px);
+
+        &:after{
+          @include triangle(10px, #2d803b, 'bottom', 10px);
+          border-left: 0;
+          border-top: 0;
+
+          top: auto;
+          bottom: 100%;
+        }
+      }
+      .right{
+        left: auto;
+        right: 50%;
+        @include border-radius(5px 5px 0 5px);
+
+        &:after{
+          @include triangle(10px, #2d803b, 'top', 10px);
+          border-right: 0;
+
+          top: 100%;
+          left: auto;
+          right: 0;
+        }
+        &.bottom{
+          @include border-radius(5px 0 5px 5px);
+          &:after{
+            border-top: 0;
+
+            top: auto;
+            bottom: 100%;
+          }
+        }
+      }
+    }
+
+    .lang-toi{
+      a, .tips {
+        background-color: #79752f;
+      }
+      .tips:after{
+        border-top-color: #79752f;
+        border-bottom-color: #79752f;
+      }
+    }
+    .the-mist{
+      a, .tips {
+        background-color: #a26828;
+      }
+      .tips:after{
+        border-top-color: #a26828;
+        border-bottom-color: #a26828;
+      }
+    }
+
+  }
+  .calender--date-current{
+    .date{
+      background: #f3451e;
+      color: white;
+    }
+  }
+
+  .calender--date--has-show{
+    @include desktop{
+      &:hover {
+        background-color: #93785c;
+        color: white;
+      }
+    }
+  }
+
+  .calender--date--other{
+    display: none;
+    @include desktop{
+      display: block;
+    }
+  }
+  .calender--date--no-show{
+    display: none;
+    @include tablet{
+      display: block;
+    }
+  }
+}
+
+
+.module--booking{
+  .module--content {
+    background: white;
+    .container{
+      padding: 0 0 20px;
+      @include desktop {
+        position: relative;
+      }
+    }
+  }
+  header{
+    display: none;
+    @include tablet{
+      display: block;
+    }
+  }
+
+  .stage-zone{
+    padding: 20px 0;
+    text-align: center;
+    @include desktop{
+      padding-top: 80px;
+    }
+    .inner{
+      position: relative;
+      @include tablet{
+        padding-top: 150px;
+      }
+    }
+    .legend{
+      @include tablet {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    .seat-status{
+      margin-top: 20px;
+      @include tablet {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 0;
+      }
+    }
+    .stage{
+      margin-top: 20px;
+      @include tablet{
+        margin-top: 0;
+      }
+    }
+  }
+
+  .stage-zone--saigon{
+    .inner{
+      @include tablet{
+        padding-top: 50px;
+      }
+    }
+  }
+
+  .booking-info{
+    background: image_url('bg-module.jpg');
+    background-size: 100px;
+    margin: 0;
+    @include desktop{
+      background-size: 200px;
+      max-width: 556px;
+      margin-left: 48px;
+    }
+  }
+  .booking-summary .booking-summary--name{
+    float: none;
+    width: auto;
+  }
+
+  .booking-info--selecting{
+    @include desktop{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .booking-summary{
+      background: none;
+      color: #333;
+      p{
+        border-top: none;
+        padding: 2px 0;
+      }
+    }
+    h3{
+      font-size: 18px;
+      font-weight: 700;
+      margin: 10px 0 5px;
+      @include tablet{
+        font-size: 20px;
+        float: left;
+        width: 40%;
+      }
+      @include desktop {
+        width: 180px;
+      }
+      span{
+        @include desktop {
+          display: block;
+        }
+        color: #a96929;
+        text-transform: uppercase;
+      }
+    }
+    .booking-summary--selecting{
+      font-size: 14px;
+      @include tablet{
+        font-size: 15px;
+        float: right;
+        width: 60%;
+      }
+      @include desktop {
+        width: 320px;
+      }
+      .color, .value{
+        color: #a96929;
+        font-weight: 700;
+      }
+      .label{
+        width: 28%;
+      }
+      .value{
+        width: 70%;
+      }
+    }
+    .form-field{
+      text-align: center;
+      border-top: 1px solid #333;
+      margin-top: 10px;
+      padding-top: 10px;
+      @include tablet{
+        border-top: none;
+        margin-top: 0;
+        padding-top: 0;
+        text-align: left;
+      }
+    }
+    .form-label{
+      @include tablet {
+        width: 285px;
+      }
+    }
+    .input-group{
+      width: 100px;
+      margin: 5px auto 0;
+      @include tablet {
+        margin: 10px 0 0;
+      }
+    }
+
+    .action-group{
+      margin: 10px 0;
+      @include tablet{
+        margin: 5px 0;
+      }
+    }
+  }
+}

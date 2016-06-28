@@ -1,0 +1,14 @@
+{
+  "name": "Stage",
+  "description": "Graphic design and online marketing consulting",
+  "main": "",
+  "authors": [
+    "Man Tran <minhman.tran@ogilvy.com>"
+  ],
+  "dependencies": {
+    "jquery": "*",
+    "magnific-popup": "*",
+    "malihu-custom-scrollbar-plugin": "*",
+    "jquery-validation": "*"
+  }
+}

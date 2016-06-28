@@ -1,0 +1,57 @@
+@import "compass/css3";
+
+@import "compass/utilities/sprites";
+
+@import "global/common";
+@import "fontface";
+@import "variables";
+@import "mixin";
+@import "reset";
+
+/* global */
+@import "global/retina-sprites";
+//@import "global/retina-background-image";
+@import "global/form";
+
+body{
+    font-family: $font-lato;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    @include tablet{
+        font-size: 14px;
+    }
+}
+
+.clearfix{
+    @include clearfix;
+}
+
+.container{
+    max-width: 960px;
+    margin-left: 10px;
+    margin-right: 10px;
+    @include desktop{
+        max-width: 1144px;
+    }
+    @include large{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* partials */
+@import "partials/header";
+@import "partials/footer";
+@import "partials/popup";
+@import "partials/countdown";
+
+//@import "animate";
+
+/* plugins */
+
+/* page */
+@import "pages/page";
+@import "pages/ticket";
+@import "pages/message";

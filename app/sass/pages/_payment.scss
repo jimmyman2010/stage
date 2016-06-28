@@ -1,0 +1,36 @@
+.payment-page{
+    .module--content .container{
+        padding: 75px 0 125px;
+    }
+    h2{
+        font-weight: 300;
+        font-size: 50px;
+        text-align: center;
+        margin: 0 0 25px;
+    }
+    .noted{
+        border: 1px solid #a96929;
+        @include border-radius(5px);
+        max-width: 946px;
+        margin: 0 auto;
+        padding: 40px 100px;
+        font-size: 20px;
+
+        position: relative;
+        &:after{
+            content: '';
+            @include use-sprite('noted');
+
+            position: absolute;
+            bottom: -33px;
+            right: 0;
+        }
+
+        p{
+            margin: 10px 0;
+        }
+        a{
+            color: #6e953b;
+        }
+    }
+}
