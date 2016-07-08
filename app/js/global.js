@@ -115,9 +115,28 @@ var STAG = (function(){
                 });
             }
         },
+        windowWidthHeight: function(){
+            var heightWindow = document.documentElement.clientHeight;
+            var widthWindow = document.documentElement.clientWidth;
+            var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            if (iOS) {
+                var zoomLevel = document.documentElement.clientWidth / window.innerWidth;
+                heightWindow = window.innerHeight * zoomLevel;
+                widthWindow = window.innerWidth * zoomLevel;
+            }
+            return {width: widthWindow, height: heightWindow};
+        },
+        maintenance: function(){
+            'use strict';
+            var maintenance = $('.maintenance-page');
+            if(maintenance.length > 0){
+                maintenance.find('.module--content').height(method.windowWidthHeight().height - 4);
+            }
+        },
         init: function () {
             method.ticketPage();
             method.countdown();
+            method.maintenance();
         }
     };
     return {
@@ -130,5 +149,5 @@ var STAG = (function(){
 $(function(){
     'use strict';
     STAG.init();
-     STAG.showNoticePopup();
+     //STAG.showNoticePopup();
 });

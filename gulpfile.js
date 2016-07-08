@@ -21,9 +21,13 @@ var include = require('gulp-html-tag-include');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
-gulp.task('build', ['html-include', 'fonts', 'compass', 'images', 'svgmin', 'html']);
+gulp.task('build', ['html-include', 'compass'], function(){
+    gulp.start(['fonts', 'images', 'svgmin', 'html']);
+});
 
-gulp.task('default', ['clean', 'build']);
+gulp.task('default', ['clean'], function(){
+    gulp.start('build');
+});
 
 gulp.task('svgmin', function () {
     return gulp.src('app/svg/*.svg')
