@@ -1,0 +1,1170 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Booking Information - Lune Production</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://dev.luneproduction.com/Content/guest/css/vendor.min.css">
+    <link rel="stylesheet" href="http://dev.luneproduction.com/Content/guest/css/global.min.css">
+    <link rel="stylesheet" href="css/fix.css">
+    <base href="http://dev.luneproduction.com/" />
+    <script src="/Scripts/libs/jquery.js"></script>
+    <script src="/Scripts/dev/resource.js"></script>
+    <script src="/Scripts/dev/common.js"></script>
+
+</head>
+<body>
+<div id="tab_ajax_loading" style="display:none;position:fixed;z-index:999;right:20px;">
+
+</div>
+<div id="noticePopup" class="zoom-anim-dialog  popup-global" style="display:none">
+    <div class="popup--header">
+        Lune Production
+    </div>
+    <div class="popup--content">
+        <p>The online booking for this show is closed. Please come to our Box Office at the Saigon Opera House to check available seats.</p>
+        <a href="javascript:void(0);" class="button button--close">CLOSE</a>
+    </div>
+    <button title="Close (Esc)" type="button" class="mfp-close button b-close">×</button>
+</div>
+<div class="site-container">
+    <!--header class="header">
+
+    </header-->
+
+    <main class="ticket-page" role="main">
+
+        <script type="text/javascript" src="/Scripts/libs/TimeCircles.js"></script>
+        <link rel="stylesheet" href="/Content/css/TimeCircles.css">
+        <script type="text/javascript" src="/Scripts/libs/jquery.maphilight.js"></script>
+        <section class="module module--booking">
+            <header>
+                <div class="container">
+                    <a href="http://www.luneproduction.com/" class="button button--home">BACK TO HOMEPAGE</a>
+                    <ul class="step-by-step">
+                        <li><a href="javascript:void(0);">1. Select Show</a></li>
+                        <li class="active"><a href="javascript:void(0);">2. Select Tickets</a></li>
+                        <li><a href="javascript:void(0);">3. Buy Tickets</a></li>
+                    </ul>
+                    <div id="CountDownTimer" class="countdown" data-timer="832.747153520584" style="height: 65px;color:#8dc63f"></div>
+                </div>
+            </header>
+            <div class="module--content">
+                <div class="container">
+                    <div class="step">
+                        <div class="inner">
+                            <span>
+                                2. <br/> Select Tickets
+                            </span>
+                        </div>
+                    </div>
+                    <div class="booking-info">
+                        <div class="booking-summary">
+                            <div class="booking-summary--name">
+                                <p>
+                                    <span class="label">Show Name:</span>
+                                    <span class="value">A O SHOW</span>
+                                </p>
+                                <p>
+                                    <span class="label">Venue:</span>
+                                    <span class="value">Saigon Opera House</span>
+                                </p>
+                                <p>
+                                    <span class="label">Address:</span>
+                                    <span class="value">07 Cong Truong Lam Son, Dist. 1, Ho Chi Minh.</span>
+                                </p>
+                                <p>
+                                    <span class="label">Show time:</span>
+                                    <span class="value"><span class="color">Thu, 21-Jul-2016 at 20:00</span></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage-zone">
+                        <div class="inner">
+
+                            <script src="/Scripts/dev/seatingdata.js?sid=202443740"></script>
+                            <script type="text/javascript">
+                                var totalseat = 10 ;
+                                var current = 0;
+                                var currentClass = "";
+                                var currentClassName = "";
+                                var currentFloor = "";
+                                var selected = false;
+
+                                $(function () {
+                                    $('.map').maphilight({
+                                        fillColor: '5CFA00',
+                                        fillOpacity: 0.4
+                                    });
+
+                                });
+                            </script>
+                            <figure class="legend">
+                                <img src="/Uploads/seatingplan/AOShow20141018/seatingplan-SG-legend-02.png" alt="">
+                            </figure>
+                            <figure class="seat-status">
+                                <img src="/Uploads/seatingplan/AOShow20141018/seatingplan-SG-seatstatus-03.png" alt="">
+                            </figure>
+                            <IMG  class="map"  src="/Uploads/seatingplan/OperaHouse-AOShow20141018/seating-plan.png" useMap="#ImageMap" border=0>
+                            <MAP id="map-tag" name="ImageMap" >
+
+                                <area shape="rect" coords="229,235,256,262"  href="javascript:void(0)" id="ao_seat_A15_0"  alt="" title="">
+                                <area shape="rect" coords="274,235,301,262"  href="javascript:void(0)" id="ao_seat_A13_0"  alt="" title="">
+                                <area shape="rect" coords="319,235,346,262"  href="javascript:void(0)" id="ao_seat_A11_0"  alt="" title="">
+                                <area shape="rect" coords="364,235,391,262"  href="javascript:void(0)" id="ao_seat_A9_0"  alt="" title="">
+                                <area shape="rect" coords="409,235,436,262"  href="javascript:void(0)" id="ao_seat_A7_0"  alt="" title="">
+                                <area shape="rect" coords="454,235,481,262"  href="javascript:void(0)" id="ao_seat_A5_0"  alt="" title="">
+                                <area shape="rect" coords="499,235,526,262"  href="javascript:void(0)" id="ao_seat_A3_0"  alt="" title="">
+                                <area shape="rect" coords="544,235,571,262"  href="javascript:void(0)" id="ao_seat_A1_0"  alt="" title="">
+                                <area shape="rect" coords="624,235,651,262"  href="javascript:void(0)" id="ao_seat_A2_0"  alt="" title="">
+                                <area shape="rect" coords="669,235,696,262"  href="javascript:void(0)" id="ao_seat_A4_0"  alt="" title="">
+                                <area shape="rect" coords="714,235,741,262"  href="javascript:void(0)" id="ao_seat_A6_0"  alt="" title="">
+                                <area shape="rect" coords="759,235,786,262"  href="javascript:void(0)" id="ao_seat_A8_0"  alt="" title="">
+                                <area shape="rect" coords="804,235,831,262"  href="javascript:void(0)" id="ao_seat_A10_0"  alt="" title="">
+                                <area shape="rect" coords="849,235,876,262"  href="javascript:void(0)" id="ao_seat_A12_0"  alt="" title="">
+                                <area shape="rect" coords="894,235,921,262"  href="javascript:void(0)" id="ao_seat_A14_0"  alt="" title="">
+                                <area shape="rect" coords="937,235,963,262"  href="javascript:void(0)" id="ao_seat_A16_0"  alt="" title="">
+
+                                <area shape="rect" coords="229,274,256,301"  href="javascript:void(0)" id="ao_seat_B15_0"  alt="" title="">
+                                <area shape="rect" coords="274,274,301,301"  href="javascript:void(0)" id="ao_seat_B13_0"  alt="" title="">
+                                <area shape="rect" coords="319,274,346,301"  href="javascript:void(0)" id="ao_seat_B11_0"  alt="" title="">
+                                <area shape="rect" coords="364,274,391,301"  href="javascript:void(0)" id="ao_seat_B9_0"  alt="" title="">
+                                <area shape="rect" coords="409,274,436,301"  href="javascript:void(0)" id="ao_seat_B7_0"  alt="" title="">
+                                <area shape="rect" coords="454,274,481,301"  href="javascript:void(0)" id="ao_seat_B5_0"  alt="" title="">
+                                <area shape="rect" coords="499,274,526,301"  href="javascript:void(0)" id="ao_seat_B3_0"  alt="" title="">
+                                <area shape="rect" coords="544,274,571,301"  href="javascript:void(0)" id="ao_seat_B1_0"  alt="" title="">
+                                <area shape="rect" coords="624,274,651,301"  href="javascript:void(0)" id="ao_seat_B2_0"  alt="" title="">
+                                <area shape="rect" coords="669,274,696,301"  href="javascript:void(0)" id="ao_seat_B4_0"  alt="" title="">
+                                <area shape="rect" coords="714,274,741,301"  href="javascript:void(0)" id="ao_seat_B6_0"  alt="" title="">
+                                <area shape="rect" coords="759,274,786,301"  href="javascript:void(0)" id="ao_seat_B8_0"  alt="" title="">
+                                <area shape="rect" coords="804,274,831,301"  href="javascript:void(0)" id="ao_seat_B10_0"  alt="" title="">
+                                <area shape="rect" coords="849,274,876,301"  href="javascript:void(0)" id="ao_seat_B12_0"  alt="" title="">
+                                <area shape="rect" coords="894,274,921,301"  href="javascript:void(0)" id="ao_seat_B14_0"  alt="" title="">
+                                <area shape="rect" coords="937,274,963,301"  href="javascript:void(0)" id="ao_seat_B16_0"  alt="" title="">
+
+                                <area shape="rect" coords="229,313,256,340"  href="javascript:void(0)" id="ao_seat_C15_0"  alt="" title="">
+                                <area shape="rect" coords="274,313,301,340"  href="javascript:void(0)" id="ao_seat_C13_0"  alt="" title="">
+                                <area shape="rect" coords="319,313,346,340"  href="javascript:void(0)" id="ao_seat_C11_0"  alt="" title="">
+                                <area shape="rect" coords="364,313,391,340"  href="javascript:void(0)" id="ao_seat_C9_0"  alt="" title="">
+                                <area shape="rect" coords="409,313,436,340"  href="javascript:void(0)" id="ao_seat_C7_0"  alt="" title="">
+                                <area shape="rect" coords="454,313,481,340"  href="javascript:void(0)" id="ao_seat_C5_0"  alt="" title="">
+                                <area shape="rect" coords="499,313,526,340"  href="javascript:void(0)" id="ao_seat_C3_0"  alt="" title="">
+                                <area shape="rect" coords="544,313,571,340"  href="javascript:void(0)" id="ao_seat_C1_0"  alt="" title="">
+                                <area shape="rect" coords="624,313,651,340"  href="javascript:void(0)" id="ao_seat_C2_0"  alt="" title="">
+                                <area shape="rect" coords="669,313,696,340"  href="javascript:void(0)" id="ao_seat_C4_0"  alt="" title="">
+                                <area shape="rect" coords="714,313,741,340"  href="javascript:void(0)" id="ao_seat_C6_0"  alt="" title="">
+                                <area shape="rect" coords="759,313,786,340"  href="javascript:void(0)" id="ao_seat_C8_0"  alt="" title="">
+                                <area shape="rect" coords="804,313,831,340"  href="javascript:void(0)" id="ao_seat_C10_0"  alt="" title="">
+                                <area shape="rect" coords="849,313,876,340"  href="javascript:void(0)" id="ao_seat_C12_0"  alt="" title="">
+                                <area shape="rect" coords="894,313,921,340"  href="javascript:void(0)" id="ao_seat_C14_0"  alt="" title="">
+                                <area shape="rect" coords="937,313,963,340"  href="javascript:void(0)" id="ao_seat_C16_0"  alt="" title="">
+
+
+                                <area shape="rect" coords="229,352,256,379"  href="javascript:void(0)" id="ao_seat_D15_0"  alt="" title="">
+                                <area shape="rect" coords="274,352,301,379"  href="javascript:void(0)" id="ao_seat_D13_0"  alt="" title="">
+                                <area shape="rect" coords="319,352,346,379"  href="javascript:void(0)" id="ao_seat_D11_0"  alt="" title="">
+                                <area shape="rect" coords="364,352,391,379"  href="javascript:void(0)" id="ao_seat_D9_0"  alt="" title="">
+                                <area shape="rect" coords="409,352,436,379"  href="javascript:void(0)" id="ao_seat_D7_0"  alt="" title="">
+                                <area shape="rect" coords="454,352,481,379"  href="javascript:void(0)" id="ao_seat_D5_0"  alt="" title="">
+                                <area shape="rect" coords="499,352,526,379"  href="javascript:void(0)" id="ao_seat_D3_0"  alt="" title="">
+                                <area shape="rect" coords="544,352,571,379"  href="javascript:void(0)" id="ao_seat_D1_0"  alt="" title="">
+                                <area shape="rect" coords="624,352,651,379"  href="javascript:void(0)" id="ao_seat_D2_0"  alt="" title="">
+                                <area shape="rect" coords="669,352,696,379"  href="javascript:void(0)" id="ao_seat_D4_0"  alt="" title="">
+                                <area shape="rect" coords="714,352,741,379"  href="javascript:void(0)" id="ao_seat_D6_0"  alt="" title="">
+                                <area shape="rect" coords="759,352,786,379"  href="javascript:void(0)" id="ao_seat_D8_0"  alt="" title="">
+                                <area shape="rect" coords="804,352,831,379"  href="javascript:void(0)" id="ao_seat_D10_0"  alt="" title="">
+                                <area shape="rect" coords="849,352,876,379"  href="javascript:void(0)" id="ao_seat_D12_0"  alt="" title="">
+                                <area shape="rect" coords="894,352,921,379"  href="javascript:void(0)" id="ao_seat_D14_0"  alt="" title="">
+                                <area shape="rect" coords="937,352,963,379"  href="javascript:void(0)" id="ao_seat_D16_0"  alt="" title="">
+
+                                <area shape="rect" coords="229,393,256,420"  href="javascript:void(0)" id="ao_seat_E15_0"  alt="" title="">
+                                <area shape="rect" coords="274,393,301,420"  href="javascript:void(0)" id="ao_seat_E13_0"  alt="" title="">
+                                <area shape="rect" coords="319,393,346,420"  href="javascript:void(0)" id="ao_seat_E11_0"  alt="" title="">
+                                <area shape="rect" coords="364,393,391,420"  href="javascript:void(0)" id="ao_seat_E9_0"  alt="" title="">
+                                <area shape="rect" coords="409,393,436,420"  href="javascript:void(0)" id="ao_seat_E7_0"  alt="" title="">
+                                <area shape="rect" coords="454,393,481,420"  href="javascript:void(0)" id="ao_seat_E5_0"  alt="" title="">
+                                <area shape="rect" coords="499,393,526,420"  href="javascript:void(0)" id="ao_seat_E3_0"  alt="" title="">
+                                <area shape="rect" coords="544,393,571,420"  href="javascript:void(0)" id="ao_seat_E1_0"  alt="" title="">
+                                <area shape="rect" coords="624,393,651,420"  href="javascript:void(0)" id="ao_seat_E2_0"  alt="" title="">
+                                <area shape="rect" coords="669,393,696,420"  href="javascript:void(0)" id="ao_seat_E4_0"  alt="" title="">
+                                <area shape="rect" coords="714,393,741,420"  href="javascript:void(0)" id="ao_seat_E6_0"  alt="" title="">
+                                <area shape="rect" coords="759,393,786,420"  href="javascript:void(0)" id="ao_seat_E8_0"  alt="" title="">
+                                <area shape="rect" coords="804,393,831,420"  href="javascript:void(0)" id="ao_seat_E10_0"  alt="" title="">
+                                <area shape="rect" coords="849,393,876,420"  href="javascript:void(0)" id="ao_seat_E12_0"  alt="" title="">
+                                <area shape="rect" coords="894,393,921,420"  href="javascript:void(0)" id="ao_seat_E14_0"  alt="" title="">
+                                <area shape="rect" coords="937,393,963,420"  href="javascript:void(0)" id="ao_seat_E16_0"  alt="" title="">
+
+                                <area shape="rect" coords="229,432,256,459"  href="javascript:void(0)" id="ao_seat_F15_0"  alt="" title="">
+                                <area shape="rect" coords="274,432,301,459"  href="javascript:void(0)" id="ao_seat_F13_0"  alt="" title="">
+                                <area shape="rect" coords="319,432,346,459"  href="javascript:void(0)" id="ao_seat_F11_0"  alt="" title="">
+                                <area shape="rect" coords="364,432,391,459"  href="javascript:void(0)" id="ao_seat_F9_0"  alt="" title="">
+                                <area shape="rect" coords="409,432,436,459"  href="javascript:void(0)" id="ao_seat_F7_0"  alt="" title="">
+                                <area shape="rect" coords="454,432,481,459"  href="javascript:void(0)" id="ao_seat_F5_0"  alt="" title="">
+                                <area shape="rect" coords="499,432,526,459"  href="javascript:void(0)" id="ao_seat_F3_0"  alt="" title="">
+                                <area shape="rect" coords="544,432,571,459"  href="javascript:void(0)" id="ao_seat_F1_0"  alt="" title="">
+                                <area shape="rect" coords="624,432,651,459"  href="javascript:void(0)" id="ao_seat_F2_0"  alt="" title="">
+                                <area shape="rect" coords="669,432,696,459"  href="javascript:void(0)" id="ao_seat_F4_0"  alt="" title="">
+                                <area shape="rect" coords="714,432,741,459"  href="javascript:void(0)" id="ao_seat_F6_0"  alt="" title="">
+                                <area shape="rect" coords="759,432,786,459"  href="javascript:void(0)" id="ao_seat_F8_0"  alt="" title="">
+                                <area shape="rect" coords="804,432,831,459"  href="javascript:void(0)" id="ao_seat_F10_0"  alt="" title="">
+                                <area shape="rect" coords="849,432,876,459"  href="javascript:void(0)" id="ao_seat_F12_0"  alt="" title="">
+                                <area shape="rect" coords="894,432,921,459"  href="javascript:void(0)" id="ao_seat_F14_0"  alt="" title="">
+                                <area shape="rect" coords="937,432,963,459"  href="javascript:void(0)" id="ao_seat_F16_0"  alt="" title="">
+
+                                <area shape="rect" coords="229,473,256,500"  href="javascript:void(0)" id="ao_seat_G15_0"  alt="" title="">
+                                <area shape="rect" coords="274,473,301,500"  href="javascript:void(0)" id="ao_seat_G13_0"  alt="" title="">
+                                <area shape="rect" coords="319,473,346,500"  href="javascript:void(0)" id="ao_seat_G11_0"  alt="" title="">
+                                <area shape="rect" coords="364,473,391,500"  href="javascript:void(0)" id="ao_seat_G9_0"  alt="" title="">
+                                <area shape="rect" coords="409,473,436,500"  href="javascript:void(0)" id="ao_seat_G7_0"  alt="" title="">
+                                <area shape="rect" coords="454,473,481,500"  href="javascript:void(0)" id="ao_seat_G5_0"  alt="" title="">
+                                <area shape="rect" coords="499,473,526,500"  href="javascript:void(0)" id="ao_seat_G3_0"  alt="" title="">
+                                <area shape="rect" coords="544,473,571,500"  href="javascript:void(0)" id="ao_seat_G1_0"  alt="" title="">
+                                <area shape="rect" coords="624,473,651,500"  href="javascript:void(0)" id="ao_seat_G2_0"  alt="" title="">
+                                <area shape="rect" coords="669,473,696,500"  href="javascript:void(0)" id="ao_seat_G4_0"  alt="" title="">
+                                <area shape="rect" coords="714,473,741,500"  href="javascript:void(0)" id="ao_seat_G6_0"  alt="" title="">
+                                <area shape="rect" coords="759,473,786,500"  href="javascript:void(0)" id="ao_seat_G8_0"  alt="" title="">
+                                <area shape="rect" coords="804,473,831,500"  href="javascript:void(0)" id="ao_seat_G10_0"  alt="" title="">
+                                <area shape="rect" coords="849,473,876,500"  href="javascript:void(0)" id="ao_seat_G12_0"  alt="" title="">
+                                <area shape="rect" coords="894,473,921,500"  href="javascript:void(0)" id="ao_seat_G14_0"  alt="" title="">
+                                <area shape="rect" coords="937,473,963,500"  href="javascript:void(0)" id="ao_seat_G16_0"  alt="" title="">
+
+                                <area shape="rect" coords="229,512,256,539"  href="javascript:void(0)" id="ao_seat_H15_0"  alt="" title="">
+                                <area shape="rect" coords="274,512,301,539"  href="javascript:void(0)" id="ao_seat_H13_0"  alt="" title="">
+                                <area shape="rect" coords="319,512,346,539"  href="javascript:void(0)" id="ao_seat_H11_0"  alt="" title="">
+                                <area shape="rect" coords="364,512,391,539"  href="javascript:void(0)" id="ao_seat_H9_0"  alt="" title="">
+                                <area shape="rect" coords="409,512,436,539"  href="javascript:void(0)" id="ao_seat_H7_0"  alt="" title="">
+                                <area shape="rect" coords="454,512,481,539"  href="javascript:void(0)" id="ao_seat_H5_0"  alt="" title="">
+                                <area shape="rect" coords="499,512,526,539"  href="javascript:void(0)" id="ao_seat_H3_0"  alt="" title="">
+                                <area shape="rect" coords="544,512,571,539"  href="javascript:void(0)" id="ao_seat_H1_0"  alt="" title="">
+                                <area shape="rect" coords="624,512,651,539"  href="javascript:void(0)" id="ao_seat_H2_0"  alt="" title="">
+                                <area shape="rect" coords="669,512,696,539"  href="javascript:void(0)" id="ao_seat_H4_0"  alt="" title="">
+                                <area shape="rect" coords="714,512,741,539"  href="javascript:void(0)" id="ao_seat_H6_0"  alt="" title="">
+                                <area shape="rect" coords="759,512,786,539"  href="javascript:void(0)" id="ao_seat_H8_0"  alt="" title="">
+                                <area shape="rect" coords="804,512,831,539"  href="javascript:void(0)" id="ao_seat_H10_0"  alt="" title="">
+                                <area shape="rect" coords="849,512,876,539"  href="javascript:void(0)" id="ao_seat_H12_0"  alt="" title="">
+                                <area shape="rect" coords="894,512,921,539"  href="javascript:void(0)" id="ao_seat_H14_0"  alt="" title="">
+                                <area shape="rect" coords="937,512,963,539"  href="javascript:void(0)" id="ao_seat_H16_0"  alt="" title="">
+
+                                <area shape="rect" coords="229,551,256,578"  href="javascript:void(0)" id="ao_seat_I15_0"  alt="" title="">
+                                <area shape="rect" coords="274,551,301,578"  href="javascript:void(0)" id="ao_seat_I13_0"  alt="" title="">
+                                <area shape="rect" coords="319,551,346,578"  href="javascript:void(0)" id="ao_seat_I11_0"  alt="" title="">
+                                <area shape="rect" coords="364,551,391,578"  href="javascript:void(0)" id="ao_seat_I9_0"  alt="" title="">
+                                <area shape="rect" coords="409,551,436,578"  href="javascript:void(0)" id="ao_seat_I7_0"  alt="" title="">
+                                <area shape="rect" coords="454,551,481,578"  href="javascript:void(0)" id="ao_seat_I5_0"  alt="" title="">
+                                <area shape="rect" coords="499,551,526,578"  href="javascript:void(0)" id="ao_seat_I3_0"  alt="" title="">
+                                <area shape="rect" coords="544,551,571,578"  href="javascript:void(0)" id="ao_seat_I1_0"  alt="" title="">
+                                <area shape="rect" coords="624,551,651,578"  href="javascript:void(0)" id="ao_seat_I2_0"  alt="" title="">
+                                <area shape="rect" coords="669,551,696,578"  href="javascript:void(0)" id="ao_seat_I4_0"  alt="" title="">
+                                <area shape="rect" coords="714,551,741,578"  href="javascript:void(0)" id="ao_seat_I6_0"  alt="" title="">
+                                <area shape="rect" coords="759,551,786,578"  href="javascript:void(0)" id="ao_seat_I8_0"  alt="" title="">
+                                <area shape="rect" coords="804,551,831,578"  href="javascript:void(0)" id="ao_seat_I10_0"  alt="" title="">
+                                <area shape="rect" coords="849,551,876,578"  href="javascript:void(0)" id="ao_seat_I12_0"  alt="" title="">
+                                <area shape="rect" coords="894,551,921,578"  href="javascript:void(0)" id="ao_seat_I14_0"  alt="" title="">
+                                <area shape="rect" coords="937,551,963,578"  href="javascript:void(0)" id="ao_seat_I16_0"  alt="" title="">
+
+                                <area shape="rect" coords="229,592,256,619"  href="javascript:void(0)" id="ao_seat_J15_0"  alt="" title="">
+                                <area shape="rect" coords="274,592,301,619"  href="javascript:void(0)" id="ao_seat_J13_0"  alt="" title="">
+                                <area shape="rect" coords="319,592,346,619"  href="javascript:void(0)" id="ao_seat_J11_0"  alt="" title="">
+                                <area shape="rect" coords="364,592,391,619"  href="javascript:void(0)" id="ao_seat_J9_0"  alt="" title="">
+                                <area shape="rect" coords="409,592,436,619"  href="javascript:void(0)" id="ao_seat_J7_0"  alt="" title="">
+                                <area shape="rect" coords="454,592,481,619"  href="javascript:void(0)" id="ao_seat_J5_0"  alt="" title="">
+                                <area shape="rect" coords="499,592,526,619"  href="javascript:void(0)" id="ao_seat_J3_0"  alt="" title="">
+                                <area shape="rect" coords="544,592,571,619"  href="javascript:void(0)" id="ao_seat_J1_0"  alt="" title="">
+                                <area shape="rect" coords="624,592,651,619"  href="javascript:void(0)" id="ao_seat_J2_0"  alt="" title="">
+                                <area shape="rect" coords="669,592,696,619"  href="javascript:void(0)" id="ao_seat_J4_0"  alt="" title="">
+                                <area shape="rect" coords="714,592,741,619"  href="javascript:void(0)" id="ao_seat_J6_0"  alt="" title="">
+                                <area shape="rect" coords="759,592,786,619"  href="javascript:void(0)" id="ao_seat_J8_0"  alt="" title="">
+                                <area shape="rect" coords="804,592,831,619"  href="javascript:void(0)" id="ao_seat_J10_0"  alt="" title="">
+                                <area shape="rect" coords="849,592,876,619"  href="javascript:void(0)" id="ao_seat_J12_0"  alt="" title="">
+                                <area shape="rect" coords="894,592,921,619"  href="javascript:void(0)" id="ao_seat_J14_0"  alt="" title="">
+                                <area shape="rect" coords="937,592,963,619"  href="javascript:void(0)" id="ao_seat_J16_0"  alt="" title="">
+
+                                <area shape="rect" coords="229,631,256,658"  href="javascript:void(0)" id="ao_seat_K15_0"  alt="" title="">
+                                <area shape="rect" coords="274,631,301,658"  href="javascript:void(0)" id="ao_seat_K13_0"  alt="" title="">
+                                <area shape="rect" coords="319,631,346,658"  href="javascript:void(0)" id="ao_seat_K11_0"  alt="" title="">
+                                <area shape="rect" coords="364,631,391,658"  href="javascript:void(0)" id="ao_seat_K9_0"  alt="" title="">
+                                <area shape="rect" coords="409,631,436,658"  href="javascript:void(0)" id="ao_seat_K7_0"  alt="" title="">
+                                <area shape="rect" coords="454,631,481,658"  href="javascript:void(0)" id="ao_seat_K5_0"  alt="" title="">
+                                <area shape="rect" coords="499,631,526,658"  href="javascript:void(0)" id="ao_seat_K3_0"  alt="" title="">
+                                <area shape="rect" coords="544,631,571,658"  href="javascript:void(0)" id="ao_seat_K1_0"  alt="" title="">
+                                <area shape="rect" coords="624,631,651,658"  href="javascript:void(0)" id="ao_seat_K2_0"  alt="" title="">
+                                <area shape="rect" coords="669,631,696,658"  href="javascript:void(0)" id="ao_seat_K4_0"  alt="" title="">
+                                <area shape="rect" coords="714,631,741,658"  href="javascript:void(0)" id="ao_seat_K6_0"  alt="" title="">
+                                <area shape="rect" coords="759,631,786,658"  href="javascript:void(0)" id="ao_seat_K8_0"  alt="" title="">
+                                <area shape="rect" coords="804,631,831,658"  href="javascript:void(0)" id="ao_seat_K10_0"  alt="" title="">
+                                <area shape="rect" coords="849,631,876,658"  href="javascript:void(0)" id="ao_seat_K12_0"  alt="" title="">
+                                <area shape="rect" coords="894,631,921,658"  href="javascript:void(0)" id="ao_seat_K14_0"  alt="" title="">
+                                <area shape="rect" coords="937,631,963,658"  href="javascript:void(0)" id="ao_seat_K16_0"  alt="" title="">
+
+                                <area shape="rect" coords="229,670,256,697"  href="javascript:void(0)" id="ao_seat_L15_0"  alt="" title="">
+                                <area shape="rect" coords="274,670,301,697"  href="javascript:void(0)" id="ao_seat_L13_0"  alt="" title="">
+                                <area shape="rect" coords="319,670,346,697"  href="javascript:void(0)" id="ao_seat_L11_0"  alt="" title="">
+                                <area shape="rect" coords="364,670,391,697"  href="javascript:void(0)" id="ao_seat_L9_0"  alt="" title="">
+                                <area shape="rect" coords="409,670,436,697"  href="javascript:void(0)" id="ao_seat_L7_0"  alt="" title="">
+                                <area shape="rect" coords="454,670,481,697"  href="javascript:void(0)" id="ao_seat_L5_0"  alt="" title="">
+                                <area shape="rect" coords="499,670,526,697"  href="javascript:void(0)" id="ao_seat_L3_0"  alt="" title="">
+                                <area shape="rect" coords="544,670,571,697"  href="javascript:void(0)" id="ao_seat_L1_0"  alt="" title="">
+                                <area shape="rect" coords="624,670,651,697"  href="javascript:void(0)" id="ao_seat_L2_0"  alt="" title="">
+                                <area shape="rect" coords="669,670,696,697"  href="javascript:void(0)" id="ao_seat_L4_0"  alt="" title="">
+                                <area shape="rect" coords="714,670,741,697"  href="javascript:void(0)" id="ao_seat_L6_0"  alt="" title="">
+                                <area shape="rect" coords="759,670,786,697"  href="javascript:void(0)" id="ao_seat_L8_0"  alt="" title="">
+                                <area shape="rect" coords="804,670,831,697"  href="javascript:void(0)" id="ao_seat_L10_0"  alt="" title="">
+                                <area shape="rect" coords="849,670,876,697"  href="javascript:void(0)" id="ao_seat_L12_0"  alt="" title="">
+                                <area shape="rect" coords="894,670,921,697"  href="javascript:void(0)" id="ao_seat_L14_0"  alt="" title="">
+                                <area shape="rect" coords="937,670,963,697"  href="javascript:void(0)" id="ao_seat_L16_0"  alt="" title="">
+
+                                <area shape="rect" coords="229,709,256,736"  href="javascript:void(0)" id="ao_seat_M15_0"  alt="" title="">
+                                <area shape="rect" coords="274,709,301,736"  href="javascript:void(0)" id="ao_seat_M13_0"  alt="" title="">
+                                <area shape="rect" coords="319,709,346,736"  href="javascript:void(0)" id="ao_seat_M11_0"  alt="" title="">
+                                <area shape="rect" coords="364,709,391,736"  href="javascript:void(0)" id="ao_seat_M9_0"  alt="" title="">
+                                <area shape="rect" coords="409,709,436,736"  href="javascript:void(0)" id="ao_seat_M7_0"  alt="" title="">
+                                <area shape="rect" coords="454,709,481,736"  href="javascript:void(0)" id="ao_seat_M5_0"  alt="" title="">
+                                <area shape="rect" coords="499,709,526,736"  href="javascript:void(0)" id="ao_seat_M3_0"  alt="" title="">
+                                <area shape="rect" coords="544,709,571,736"  href="javascript:void(0)" id="ao_seat_M1_0"  alt="" title="">
+                                <area shape="rect" coords="624,709,651,736"  href="javascript:void(0)" id="ao_seat_M2_0"  alt="" title="">
+                                <area shape="rect" coords="669,709,696,736"  href="javascript:void(0)" id="ao_seat_M4_0"  alt="" title="">
+                                <area shape="rect" coords="714,709,741,736"  href="javascript:void(0)" id="ao_seat_M6_0"  alt="" title="">
+                                <area shape="rect" coords="759,709,786,736"  href="javascript:void(0)" id="ao_seat_M8_0"  alt="" title="">
+                                <area shape="rect" coords="804,709,831,736"  href="javascript:void(0)" id="ao_seat_M10_0"  alt="" title="">
+                                <area shape="rect" coords="849,709,876,736"  href="javascript:void(0)" id="ao_seat_M12_0"  alt="" title="">
+                                <area shape="rect" coords="894,709,921,736"  href="javascript:void(0)" id="ao_seat_M14_0"  alt="" title="">
+                                <area shape="rect" coords="937,709,963,736"  href="javascript:void(0)" id="ao_seat_M16_0"  alt="" title="">
+
+
+                                <area shape="rect" coords="295,748,320,775"  href="javascript:void(0)" id="ao_seat_N11_0"  alt="" title="">
+                                <area shape="rect" coords="364,748,391,775"  href="javascript:void(0)" id="ao_seat_N9_0"  alt="" title="">
+                                <area shape="rect" coords="409,748,436,775"  href="javascript:void(0)" id="ao_seat_N7_0"  alt="" title="">
+                                <area shape="rect" coords="454,748,481,775"  href="javascript:void(0)" id="ao_seat_N5_0"  alt="" title="">
+                                <area shape="rect" coords="499,748,526,775"  href="javascript:void(0)" id="ao_seat_N3_0"  alt="" title="">
+                                <area shape="rect" coords="544,748,571,775"  href="javascript:void(0)" id="ao_seat_N1_0"  alt="" title="">
+                                <area shape="rect" coords="624,748,651,775"  href="javascript:void(0)" id="ao_seat_N2_0"  alt="" title="">
+                                <area shape="rect" coords="669,748,696,775"  href="javascript:void(0)" id="ao_seat_N4_0"  alt="" title="">
+                                <area shape="rect" coords="714,748,741,775"  href="javascript:void(0)" id="ao_seat_N6_0"  alt="" title="">
+                                <area shape="rect" coords="759,748,786,775"  href="javascript:void(0)" id="ao_seat_N8_0"  alt="" title="">
+                                <area shape="rect" coords="804,748,831,775"  href="javascript:void(0)" id="ao_seat_N10_0"  alt="" title="">
+                                <area shape="rect" coords="869,748,896,775"  href="javascript:void(0)" id="ao_seat_N12_0"  alt="" title="">
+
+                                <area shape="rect" coords="254,787,280,814"  href="javascript:void(0)" id="ao_seat_O13_0"  alt="" title="">
+                                <area shape="rect" coords="319,787,346,814"  href="javascript:void(0)" id="ao_seat_O11_0"  alt="" title="">
+                                <area shape="rect" coords="364,787,391,814"  href="javascript:void(0)" id="ao_seat_O9_0"  alt="" title="">
+                                <area shape="rect" coords="409,787,436,814"  href="javascript:void(0)" id="ao_seat_O7_0"  alt="" title="">
+                                <area shape="rect" coords="454,787,481,814"  href="javascript:void(0)" id="ao_seat_O5_0"  alt="" title="">
+                                <area shape="rect" coords="499,787,526,814"  href="javascript:void(0)" id="ao_seat_O3_0"  alt="" title="">
+                                <area shape="rect" coords="544,787,571,814"  href="javascript:void(0)" id="ao_seat_O1_0"  alt="" title="">
+                                <area shape="rect" coords="624,787,651,814"  href="javascript:void(0)" id="ao_seat_O2_0"  alt="" title="">
+                                <area shape="rect" coords="669,787,696,814"  href="javascript:void(0)" id="ao_seat_O4_0"  alt="" title="">
+                                <area shape="rect" coords="714,787,741,814"  href="javascript:void(0)" id="ao_seat_O6_0"  alt="" title="">
+                                <area shape="rect" coords="759,787,786,814"  href="javascript:void(0)" id="ao_seat_O8_0"  alt="" title="">
+                                <area shape="rect" coords="804,787,831,814"  href="javascript:void(0)" id="ao_seat_O10_0"  alt="" title="">
+                                <area shape="rect" coords="849,787,876,814"  href="javascript:void(0)" id="ao_seat_O12_0"  alt="" title="">
+                                <area shape="rect" coords="918,787,945,814"  href="javascript:void(0)" id="ao_seat_O14_0"  alt="" title="">
+
+                                <area shape="rect" coords="389,826,416,853"  href="javascript:void(0)" id="ao_seat_P7_0"  alt="" title="">
+                                <area shape="rect" coords="434,826,461,853"  href="javascript:void(0)" id="ao_seat_P5_0"  alt="" title="">
+                                <area shape="rect" coords="479,826,506,853"  href="javascript:void(0)" id="ao_seat_P3_0"  alt="" title="">
+                                <area shape="rect" coords="544,826,571,853"  href="javascript:void(0)" id="ao_seat_P1_0"  alt="" title="">
+                                <area shape="rect" coords="624,826,651,853"  href="javascript:void(0)" id="ao_seat_P2_0"  alt="" title="">
+                                <area shape="rect" coords="689,826,716,853"  href="javascript:void(0)" id="ao_seat_P4_0"  alt="" title="">
+                                <area shape="rect" coords="734,826,761,853"  href="javascript:void(0)" id="ao_seat_P6_0"  alt="" title="">
+                                <area shape="rect" coords="779,826,806,853"  href="javascript:void(0)" id="ao_seat_P8_0"  alt="" title="">
+
+                                <area shape="rect" coords="389,865,416,892"  href="javascript:void(0)" id="ao_seat_Q7_0"  alt="" title="">
+                                <area shape="rect" coords="434,865,461,892"  href="javascript:void(0)" id="ao_seat_Q5_0"  alt="" title="">
+                                <area shape="rect" coords="499,865,526,892"  href="javascript:void(0)" id="ao_seat_Q3_0"  alt="" title="">
+                                <area shape="rect" coords="544,865,571,892"  href="javascript:void(0)" id="ao_seat_Q1_0"  alt="" title="">
+                                <area shape="rect" coords="624,865,651,892"  href="javascript:void(0)" id="ao_seat_Q2_0"  alt="" title="">
+                                <area shape="rect" coords="669,865,696,892"  href="javascript:void(0)" id="ao_seat_Q4_0"  alt="" title="">
+                                <area shape="rect" coords="734,865,761,892"  href="javascript:void(0)" id="ao_seat_Q6_0"  alt="" title="">
+                                <area shape="rect" coords="779,865,806,892"  href="javascript:void(0)" id="ao_seat_Q8_0"  alt="" title="">
+
+                                <area shape="rect" coords="277,196,303,223" href="javascript:void(0)" id="ao_seat_13Z_0"  alt="" title="Handicap">
+                                <area shape="rect" coords="322,196,347,223" href="javascript:void(0)" id="ao_seat_11Z_0"  alt="" title="Handicap">
+
+                                <area shape="poly" coords="190,230,217,233,213,263,186,260,190,230"  href="javascript:void(0)" id="ao_seat_A17_0" title="">
+                                <area shape="poly" coords="190,269,217,272,213,302,186,299,190,269"  href="javascript:void(0)" id="ao_seat_B17_0" title="">
+                                <area shape="poly" coords="190,310,217,313,213,341,186,338,190,310"  href="javascript:void(0)" id="ao_seat_C17_0" title="">
+                                <area shape="poly" coords="190,349,217,352,213,380,186,377,190,349"  href="javascript:void(0)" id="ao_seat_D17_0" title="">
+                                <area shape="poly" coords="190,388,217,391,213,421,186,418,190,388"  href="javascript:void(0)" id="ao_seat_E17_0" title="">
+                                <area shape="poly" coords="190,429,217,432,213,460,186,457,190,429"  href="javascript:void(0)" id="ao_seat_F17_0" title="">
+                                <area shape="poly" coords="190,468,217,471,213,500,186,497,190,468"  href="javascript:void(0)" id="ao_seat_G17_0" title="">
+                                <area shape="poly" coords="190,507,217,510,213,538,186,535,190,507"  href="javascript:void(0)" id="ao_seat_H17_0" title="">
+                                <area shape="poly" coords="190,546,217,549,213,578,186,575,190,546"  href="javascript:void(0)" id="ao_seat_I17_0" title="">
+                                <area shape="poly" coords="190,586,217,588,213,618,186,615,190,586"  href="javascript:void(0)" id="ao_seat_J17_0" title="">
+                                <area shape="poly" coords="190,625,217,628,213,656,186,653,190,625"  href="javascript:void(0)" id="ao_seat_K17_0" title="">
+                                <area shape="poly" coords="190,663,217,666,213,694,186,691,190,663"  href="javascript:void(0)" id="ao_seat_L17_0" title="">
+                                <area shape="poly" coords="170,704,197,707,193,735,166,732,170,704"  href="javascript:void(0)" id="ao_seat_M17_0" title="">
+
+
+                                <area shape="poly" coords="145,223,174,231,166,256,140,247,145,224" href="javascript:void(0)" id="ao_seat_A19_0" title="">
+                                <area shape="poly" coords="145,262,174,270,166,295,140,286,145,263" href="javascript:void(0)" id="ao_seat_B19_0" title="">
+                                <area shape="poly" coords="145,301,174,309,166,334,140,325,145,302" href="javascript:void(0)" id="ao_seat_C19_0" title="">
+                                <area shape="poly" coords="145,340,174,348,166,373,140,364,145,341" href="javascript:void(0)" id="ao_seat_D19_0" title="">
+                                <area shape="poly" coords="145,379,174,387,166,414,140,405,145,380" href="javascript:void(0)" id="ao_seat_E19_0" title="">
+                                <area shape="poly" coords="145,418,174,426,166,455,140,446,145,419" href="javascript:void(0)" id="ao_seat_F19_0" title="">
+                                <area shape="poly" coords="145,457,174,465,166,494,140,485,145,458" href="javascript:void(0)" id="ao_seat_G19_0" title="">
+                                <area shape="poly" coords="145,496,174,504,166,533,140,524,145,497" href="javascript:void(0)" id="ao_seat_H19_0" title="">
+                                <area shape="poly" coords="145,535,174,543,166,572,140,563,145,536" href="javascript:void(0)" id="ao_seat_I19_0" title="">
+                                <area shape="poly" coords="145,574,174,582,166,611,140,602,145,575" href="javascript:void(0)" id="ao_seat_J19_0" title="">
+                                <area shape="poly" coords="145,613,174,621,166,650,140,641,145,614" href="javascript:void(0)" id="ao_seat_K19_0" title="">
+                                <area shape="poly" coords="145,652,174,660,166,689,140,680,145,653" href="javascript:void(0)" id="ao_seat_L19_0" title="">
+
+                                <area shape="poly" coords="105,287,130,298,116,322,93,311,106,288"  href="javascript:void(0)" id="ao_seat_C21_0" title="">
+                                <area shape="poly" coords="105,326,130,337,116,361,93,350,106,327"  href="javascript:void(0)" id="ao_seat_D21_0" title="">
+                                <area shape="poly" coords="105,365,130,376,116,400,93,389,106,366"  href="javascript:void(0)" id="ao_seat_E21_0" title="">
+                                <area shape="poly" coords="105,404,130,415,116,439,93,428,106,405"  href="javascript:void(0)" id="ao_seat_F21_0" title="">
+                                <area shape="poly" coords="105,443,130,454,116,478,93,467,106,444"  href="javascript:void(0)" id="ao_seat_G21_0" title="">
+                                <area shape="poly" coords="105,482,130,493,116,517,93,506,106,483"  href="javascript:void(0)" id="ao_seat_H21_0" title="">
+                                <area shape="poly" coords="105,521,130,532,116,556,93,545,106,522"  href="javascript:void(0)" id="ao_seat_I21_0" title="">
+                                <area shape="poly" coords="69,545,94,556,80,580,57,569,70,546"  href="javascript:void(0)" id="ao_seat_J21_0" title="">
+                                <area shape="poly" coords="105,600,130,610,116,636,93,623,106,600"  href="javascript:void(0)" id="ao_seat_K21_0" title="">
+                                <area shape="poly" coords="105,638,130,649,116,673,93,662,106,639"  href="javascript:void(0)" id="ao_seat_L21_0" title="">
+
+
+                                <area shape="poly" coords="69,346,90,357,78,383,55,370,70,347" href="javascript:void(0)" id="ao_seat_E23_0" title="">
+                                <area shape="poly" coords="69,387,90,398,78,424,55,411,70,388" href="javascript:void(0)" id="ao_seat_F23_0" title="">
+                                <area shape="poly" coords="69,426,90,437,78,463,55,450,70,427" href="javascript:void(0)" id="ao_seat_G23_0" title="">
+                                <area shape="poly" coords="69,465,90,476,78,502,55,489,70,466" href="javascript:void(0)" id="ao_seat_H23_0" title="">
+                                <area shape="poly" coords="69,504,90,515,78,541,55,528,70,505" href="javascript:void(0)" id="ao_seat_I23_0" title="">
+                                <area shape="poly" coords="69,584,90,595,78,621,55,608,70,585" href="javascript:void(0)" id="ao_seat_K23_0" title="">
+
+                                <area shape="poly" coords="30,404,51,420,32,444,12,428,32,408" href="javascript:void(0)" id="ao_seat_G25_0" title="">
+                                <area shape="poly" coords="30,443,51,459,32,483,12,467,32,447" href="javascript:void(0)" id="ao_seat_H25_0" title="">
+                                <area shape="poly" coords="30,482,51,498,32,522,12,506,32,486" href="javascript:void(0)" id="ao_seat_I25_0" title="">
+
+
+
+                                <area shape="poly" coords="982,234,1008,230,1011,255,983,260,982,236" href="javascript:void(0)" id="ao_seat_A18_0" title="">
+                                <area shape="poly" coords="982,273,1008,269,1011,294,983,299,982,275" href="javascript:void(0)" id="ao_seat_B18_0" title="">
+                                <area shape="poly" coords="982,312,1008,308,1011,335,983,340,982,314" href="javascript:void(0)" id="ao_seat_C18_0" title="">
+                                <area shape="poly" coords="982,351,1008,347,1011,374,983,379,982,353" href="javascript:void(0)" id="ao_seat_D18_0" title="">
+                                <area shape="poly" coords="982,390,1008,386,1011,415,983,420,982,392" href="javascript:void(0)" id="ao_seat_E18_0" title="">
+                                <area shape="poly" coords="982,429,1008,425,1011,454,983,459,982,431" href="javascript:void(0)" id="ao_seat_F18_0" title="">
+                                <area shape="poly" coords="982,470,1008,466,1011,494,983,499,982,470" href="javascript:void(0)" id="ao_seat_G18_0" title="">
+                                <area shape="poly" coords="982,509,1008,505,1011,532,983,537,982,509" href="javascript:void(0)" id="ao_seat_H18_0" title="">
+                                <area shape="poly" coords="982,548,1008,544,1011,572,983,577,982,548" href="javascript:void(0)" id="ao_seat_I18_0" title="">
+                                <area shape="poly" coords="982,587,1008,583,1011,611,983,616,982,587" href="javascript:void(0)" id="ao_seat_J18_0" title="">
+                                <area shape="poly" coords="982,626,1008,622,1011,650,983,655,982,626" href="javascript:void(0)" id="ao_seat_K18_0" title="">
+                                <area shape="poly" coords="982,665,1008,661,1011,689,983,694,982,665" href="javascript:void(0)" id="ao_seat_L18_0" title="">
+                                <area shape="poly" coords="1007,710,1033,706,1036,735,1008,740,1007,704" href="javascript:void(0)" id="ao_seat_M18_0" title="">
+
+                                <area shape="poly" coords="1020,225,1030,252,1054,243,1044,218,1020,225" href="javascript:void(0)" id="ao_seat_A20_0" title="">
+                                <area shape="poly" coords="1020,264,1030,291,1054,285,1044,259,1020,264" href="javascript:void(0)" id="ao_seat_B20_0" title="">
+                                <area shape="poly" coords="1020,303,1030,332,1054,325,1044,298,1020,303" href="javascript:void(0)" id="ao_seat_C20_0" title="">
+                                <area shape="poly" coords="1020,349,1030,371,1054,364,1044,339,1020,349" href="javascript:void(0)" id="ao_seat_D20_0" title="">
+                                <area shape="poly" coords="1020,387,1030,412,1054,404,1044,378,1020,387" href="javascript:void(0)" id="ao_seat_E20_0" title="">
+                                <area shape="poly" coords="1020,424,1030,451,1054,443,1044,415,1020,424" href="javascript:void(0)" id="ao_seat_F20_0" title="">
+                                <area shape="poly" coords="1020,464,1030,493,1054,483,1044,456,1020,464" href="javascript:void(0)" id="ao_seat_G20_0" title="">
+                                <area shape="poly" coords="1020,502,1030,529,1054,520,1044,495,1020,502" href="javascript:void(0)" id="ao_seat_H20_0" title="">
+                                <area shape="poly" coords="1020,541,1030,568,1054,559,1044,534,1020,541" href="javascript:void(0)" id="ao_seat_I20_0" title="">
+                                <area shape="poly" coords="1020,582,1030,608,1054,599,1044,576,1020,582" href="javascript:void(0)" id="ao_seat_J20_0" title="">
+                                <area shape="poly" coords="1020,619,1030,648,1054,639,1044,612,1020,619" href="javascript:void(0)" id="ao_seat_K20_0" title="">
+                                <area shape="poly" coords="1020,659,1030,685,1054,676,1044,649,1020,659" href="javascript:void(0)" id="ao_seat_L20_0" title="">
+
+                                <area shape="poly" coords="1064,294,1086,283,1098,305,1076,316,1064,295" href="javascript:void(0)" id="ao_seat_C22_0" title="">
+                                <area shape="poly" coords="1064,333,1086,322,1098,344,1076,355,1064,334" href="javascript:void(0)" id="ao_seat_D22_0" title="">
+                                <area shape="poly" coords="1064,372,1086,361,1098,383,1076,394,1064,373" href="javascript:void(0)" id="ao_seat_E22_0" title="">
+                                <area shape="poly" coords="1064,411,1086,400,1098,424,1076,435,1064,412" href="javascript:void(0)" id="ao_seat_F22_0" title="">
+                                <area shape="poly" coords="1064,450,1086,439,1098,465,1076,476,1064,451" href="javascript:void(0)" id="ao_seat_G22_0" title="">
+                                <area shape="poly" coords="1064,489,1086,478,1098,504,1076,515,1064,490" href="javascript:void(0)" id="ao_seat_H22_0" title="">
+                                <area shape="poly" coords="1064,528,1086,517,1098,543,1076,554,1064,529" href="javascript:void(0)" id="ao_seat_I22_0" title="">
+                                <area shape="poly" coords="1100,552,1122,541,1134,565,1112,576,1100,553" href="javascript:void(0)" id="ao_seat_J22_0" title="">
+                                <area shape="poly" coords="1064,608,1086,597,1098,624,1076,635,1064,609" href="javascript:void(0)" id="ao_seat_K22_0" title="">
+                                <area shape="poly" coords="1064,647,1086,636,1098,661,1076,672,1064,648" href="javascript:void(0)" id="ao_seat_L22_0" title="">
+
+                                <area shape="poly" coords="1105,357,1127,342,1139,363,1117,378,1105,356" href="javascript:void(0)" id="ao_seat_E24_0" title="">
+                                <area shape="poly" coords="1105,396,1127,381,1139,402,1117,417,1105,395" href="javascript:void(0)" id="ao_seat_F24_0" title="">
+                                <area shape="poly" coords="1105,435,1127,420,1139,441,1117,456,1105,434" href="javascript:void(0)" id="ao_seat_G24_0" title="">
+                                <area shape="poly" coords="1105,474,1127,459,1139,480,1117,495,1105,473" href="javascript:void(0)" id="ao_seat_H24_0" title="">
+                                <area shape="poly" coords="1105,513,1127,498,1139,519,1117,534,1105,512" href="javascript:void(0)" id="ao_seat_I24_0" title="">
+                                <area shape="poly" coords="1104,597,1128,582,1138,603,1116,618,1104,596" href="javascript:void(0)" id="ao_seat_K24_0" title="">
+
+                                <area shape="poly" coords="1143,416,1164,399,1179,422,1158,435,1143,414" href="javascript:void(0)" id="ao_seat_G26_0" title="">
+                                <area shape="poly" coords="1143,455,1164,438,1179,461,1158,474,1143,453" href="javascript:void(0)" id="ao_seat_H26_0" title="">
+                                <area shape="poly" coords="1143,494,1164,477,1179,500,1158,513,1143,492" href="javascript:void(0)" id="ao_seat_I26_0" title="">
+
+
+                                <area shape="rect" coords="134,980,161,1007" href="javascript:void(0)" id="ao_seat_A1_1" title="">
+                                <area shape="rect" coords="179,980,206,1007" href="javascript:void(0)" id="ao_seat_A3_1" title="">
+                                <area shape="rect" coords="224,980,251,1007" href="javascript:void(0)" id="ao_seat_A5_1" title="">
+                                <area shape="rect" coords="269,980,296,1007" href="javascript:void(0)" id="ao_seat_A7_1" title="">
+                                <area shape="rect" coords="314,980,341,1007" href="javascript:void(0)" id="ao_seat_A9_1" title="">
+                                <area shape="rect" coords="359,980,386,1007" href="javascript:void(0)" id="ao_seat_A11_1" title="">
+                                <area shape="rect" coords="404,980,431,1007" href="javascript:void(0)" id="ao_seat_A13_1" title="">
+                                <area shape="rect" coords="449,980,476,1007" href="javascript:void(0)" id="ao_seat_A15_1" title="">
+                                <area shape="rect" coords="494,980,521,1007" href="javascript:void(0)" id="ao_seat_A17_1" title="">
+                                <area shape="rect" coords="539,980,566,1007" href="javascript:void(0)" id="ao_seat_A19_1" title="">
+                                <area shape="rect" coords="584,980,611,1007" href="javascript:void(0)" id="ao_seat_A21_1" title="">
+                                <area shape="rect" coords="629,980,656,1007" href="javascript:void(0)" id="ao_seat_A20_1" title="">
+                                <area shape="rect" coords="674,980,701,1007" href="javascript:void(0)" id="ao_seat_A18_1" title="">
+                                <area shape="rect" coords="719,980,746,1007" href="javascript:void(0)" id="ao_seat_A16_1" title="">
+                                <area shape="rect" coords="764,980,791,1007" href="javascript:void(0)" id="ao_seat_A14_1" title="">
+                                <area shape="rect" coords="809,980,836,1007" href="javascript:void(0)" id="ao_seat_A12_1" title="">
+                                <area shape="rect" coords="854,980,881,1007" href="javascript:void(0)" id="ao_seat_A10_1" title="">
+                                <area shape="rect" coords="899,980,926,1007" href="javascript:void(0)" id="ao_seat_A8_1" title="">
+                                <area shape="rect" coords="944,980,971,1007" href="javascript:void(0)" id="ao_seat_A6_1" title="">
+                                <area shape="rect" coords="989,980,1016,1007" href="javascript:void(0)" id="ao_seat_A4_1" title="">
+                                <area shape="rect" coords="1034,980,1061,1007" href="javascript:void(0)" id="ao_seat_A2_1" title="">
+
+                                <area shape="rect" coords="116,1020,143,1047" href="javascript:void(0)" id="ao_seat_B1_1" title="">
+                                <area shape="rect" coords="161,1020,188,1047" href="javascript:void(0)" id="ao_seat_B3_1" title="">
+                                <area shape="rect" coords="206,1020,233,1047" href="javascript:void(0)" id="ao_seat_B5_1" title="">
+                                <area shape="rect" coords="251,1020,278,1047" href="javascript:void(0)" id="ao_seat_B7_1" title="">
+                                <area shape="rect" coords="296,1020,323,1047" href="javascript:void(0)" id="ao_seat_B9_1" title="">
+                                <area shape="rect" coords="341,1020,368,1047" href="javascript:void(0)" id="ao_seat_B11_1" title="">
+                                <area shape="rect" coords="386,1020,413,1047" href="javascript:void(0)" id="ao_seat_B13_1" title="">
+                                <area shape="rect" coords="431,1020,458,1047" href="javascript:void(0)" id="ao_seat_B15_1" title="">
+                                <area shape="rect" coords="476,1020,503,1047" href="javascript:void(0)" id="ao_seat_B17_1" title="">
+                                <area shape="rect" coords="521,1020,548,1047" href="javascript:void(0)" id="ao_seat_B19_1" title="">
+                                <area shape="rect" coords="564,1020,591,1047" href="javascript:void(0)" id="ao_seat_B21_1" title="">
+                                <area shape="rect" coords="609,1020,638,1047" href="javascript:void(0)" id="ao_seat_B22_1" title="">
+                                <area shape="rect" coords="654,1020,683,1047" href="javascript:void(0)" id="ao_seat_B20_1" title="">
+                                <area shape="rect" coords="699,1020,726,1047" href="javascript:void(0)" id="ao_seat_B18_1" title="">
+                                <area shape="rect" coords="744,1020,771,1047" href="javascript:void(0)" id="ao_seat_B16_1" title="">
+                                <area shape="rect" coords="789,1020,816,1047" href="javascript:void(0)" id="ao_seat_B14_1" title="">
+                                <area shape="rect" coords="834,1020,861,1047" href="javascript:void(0)" id="ao_seat_B12_1" title="">
+                                <area shape="rect" coords="879,1020,906,1047" href="javascript:void(0)" id="ao_seat_B10_1" title="">
+                                <area shape="rect" coords="924,1020,951,1047" href="javascript:void(0)" id="ao_seat_B8_1" title="">
+                                <area shape="rect" coords="969,1020,996,1047" href="javascript:void(0)" id="ao_seat_B6_1" title="">
+                                <area shape="rect" coords="1012,1020,1039,1047" href="javascript:void(0)" id="ao_seat_B4_1" title="">
+                                <area shape="rect" coords="1057,1020,1084,1047" href="javascript:void(0)" id="ao_seat_B2_1" title="">
+
+                                <area shape="rect" coords="154,1096,179,1123" href="javascript:void(0)" id="ao_seat_C5_1" title="">
+                                <area shape="rect" coords="197,1096,222,1123" href="javascript:void(0)" id="ao_seat_C7_1" title="">
+                                <area shape="rect" coords="251,1096,277,1123" href="javascript:void(0)" id="ao_seat_C9_1" title="">
+                                <area shape="rect" coords="296,1096,322,1123" href="javascript:void(0)" id="ao_seat_C11_1" title="">
+                                <area shape="rect" coords="341,1096,367,1123" href="javascript:void(0)" id="ao_seat_C13_1" title="">
+                                <area shape="rect" coords="386,1096,412,1123" href="javascript:void(0)" id="ao_seat_C15_1" title="">
+                                <area shape="rect" coords="431,1096,457,1123" href="javascript:void(0)" id="ao_seat_C17_1" title="">
+                                <area shape="rect" coords="474,1096,502,1123" href="javascript:void(0)" id="ao_seat_C19_1" title="">
+                                <area shape="rect" coords="520,1096,547,1123" href="javascript:void(0)" id="ao_seat_C21_1" title="">
+                                <area shape="rect" coords="564,1096,592,1123" href="javascript:void(0)" id="ao_seat_C23_1" title="">
+                                <area shape="rect" coords="609,1096,637,1123" href="javascript:void(0)" id="ao_seat_C24_1" title="">
+                                <area shape="rect" coords="654,1096,682,1123" href="javascript:void(0)" id="ao_seat_C22_1" title="">
+                                <area shape="rect" coords="699,1096,727,1123" href="javascript:void(0)" id="ao_seat_C20_1" title="">
+                                <area shape="rect" coords="744,1096,770,1123" href="javascript:void(0)" id="ao_seat_C18_1" title="">
+                                <area shape="rect" coords="789,1096,815,1123" href="javascript:void(0)" id="ao_seat_C16_1" title="">
+                                <area shape="rect" coords="832,1096,860,1123" href="javascript:void(0)" id="ao_seat_C14_1" title="">
+                                <area shape="rect" coords="877,1096,905,1123" href="javascript:void(0)" id="ao_seat_C12_1" title="">
+                                <area shape="rect" coords="922,1096,950,1123" href="javascript:void(0)" id="ao_seat_C10_1" title="">
+                                <area shape="rect" coords="978,1096,1004,1123" href="javascript:void(0)" id="ao_seat_C8_1" title="">
+                                <area shape="rect" coords="1021,1096,1047,1123" href="javascript:void(0)" id="ao_seat_C6_1" title="">
+
+
+                                <area shape="poly" coords="97,1091,121,1095,116,1122,91,1114" href="javascript:void(0)" id="ao_seat_C3_1" title="">
+                                <area shape="poly" coords="55,1083,80,1087,75,1113,48,1108" href="javascript:void(0)" id="ao_seat_C1_1" title="">
+                                <area shape="poly" coords="1074,1094,1098,1091,1103,1114,1079,1120" href="javascript:void(0)" id="ao_seat_C4_1" title="">
+                                <area shape="poly" coords="1117,1090,1121,1113,1146,1110,1143,1084" href="javascript:void(0)" id="ao_seat_C2_1" title="">
+
+                                <area shape="rect" coords="153,1134,178,1160" href="javascript:void(0)" id="ao_seat_D3_1" title="">
+                                <area shape="rect" coords="196,1134,223,1160" href="javascript:void(0)" id="ao_seat_D5_1" title="">
+                                <area shape="rect" coords="271,1134,300,1160" href="javascript:void(0)" id="ao_seat_D7_1" title="">
+                                <area shape="rect" coords="316,1134,345,1160" href="javascript:void(0)" id="ao_seat_D9_1" title="">
+                                <area shape="rect" coords="361,1134,390,1160" href="javascript:void(0)" id="ao_seat_D11_1" title="">
+                                <area shape="rect" coords="406,1134,435,1160" href="javascript:void(0)" id="ao_seat_D13_1" title="">
+                                <area shape="rect" coords="765,1134,792,1160" href="javascript:void(0)" id="ao_seat_D14_1" title="">
+                                <area shape="rect" coords="810,1134,837,1160" href="javascript:void(0)" id="ao_seat_D12_1" title="">
+                                <area shape="rect" coords="855,1134,882,1160" href="javascript:void(0)" id="ao_seat_D10_1" title="">
+                                <area shape="rect" coords="900,1134,927,1160" href="javascript:void(0)" id="ao_seat_D8_1" title="">
+
+                                <area shape="rect" coords="978,1134,1004,1160" href="javascript:void(0)" id="ao_seat_D6_1" title="">
+                                <area shape="rect" coords="1021,1134,1049,1160" href="javascript:void(0)" id="ao_seat_D4_1" title="">
+                                <area shape="poly" coords="1075,1135,1099,1130,1104,1157,1079,1159" href="javascript:void(0)" id="ao_seat_D2_1" title="">
+                                <area shape="poly" coords="96,1130,121,1135,118,1160,92,1154,96,1131" href="javascript:void(0)" id="ao_seat_D1_1" title="">
+
+                                <area shape="poly" coords="71,934,93,943,84,970,61,957" href="javascript:void(0)" id="ao_seat_E1_1" title="">
+                                <area shape="poly" coords="56,966,78,978,67,1000,44,987" href="javascript:void(0)" id="ao_seat_E3_1" title="">
+                                <area shape="poly" coords="1106,942,1128,933,1137,957,1115,965,1114,965" href="javascript:void(0)" id="ao_seat_E2_1" title="">
+                                <area shape="poly" coords="1120,976,1142,967,1151,989,1129,997,1128,997" href="javascript:void(0)" id="ao_seat_E4_1" title="">
+
+                                <area shape="rect" coords="133,1252,160,1279" href="javascript:void(0)" id="ao_seat_A3_2" title="">
+                                <area shape="rect" coords="176,1252,203,1279" href="javascript:void(0)" id="ao_seat_A5_2" title="">
+                                <area shape="rect" coords="257,1252,283,1279" href="javascript:void(0)" id="ao_seat_A7_2" title="">
+                                <area shape="rect" coords="302,1252,328,1279" href="javascript:void(0)" id="ao_seat_A9_2" title="">
+                                <area shape="rect" coords="347,1252,373,1279" href="javascript:void(0)" id="ao_seat_A11_2" title="">
+                                <area shape="rect" coords="390,1252,418,1279" href="javascript:void(0)" id="ao_seat_A13_2" title="">
+                                <area shape="rect" coords="433,1252,461,1279" href="javascript:void(0)" id="ao_seat_A15_2" title="">
+                                <area shape="rect" coords="478,1252,504,1279" href="javascript:void(0)" id="ao_seat_A17_2" title="">
+                                <area shape="rect" coords="521,1252,549,1279" href="javascript:void(0)" id="ao_seat_A19_2" title="">
+                                <area shape="rect" coords="564,1252,592,1279" href="javascript:void(0)" id="ao_seat_A21_2" title="">
+                                <area shape="rect" coords="608,1252,636,1279" href="javascript:void(0)" id="ao_seat_A22_2" title="">
+                                <area shape="rect" coords="654,1252,680,1279" href="javascript:void(0)" id="ao_seat_A20_2" title="">
+                                <area shape="rect" coords="698,1252,724,1279" href="javascript:void(0)" id="ao_seat_A18_2" title="">
+                                <area shape="rect" coords="742,1252,768,1279" href="javascript:void(0)" id="ao_seat_A16_2" title="">
+                                <area shape="rect" coords="785,1252,811,1279" href="javascript:void(0)" id="ao_seat_A14_2" title="">
+                                <area shape="rect" coords="830,1252,858,1279" href="javascript:void(0)" id="ao_seat_A12_2" title="">
+                                <area shape="rect" coords="873,1252,901,1279" href="javascript:void(0)" id="ao_seat_A10_2" title="">
+                                <area shape="rect" coords="916,1252,942,1279" href="javascript:void(0)" id="ao_seat_A8_2" title="">
+
+                                <area shape="rect" coords="997,1252,1024,1279" href="javascript:void(0)" id="ao_seat_A6_2" title="">
+                                <area shape="rect" coords="1040,1252,1069,1279" href="javascript:void(0)" id="ao_seat_A4_2" title="">
+                                <area shape="poly" coords="1112,1246,1138,1242,1142,1268,1117,1271" href="javascript:void(0)" id="ao_seat_A2_2" title="">
+                                <area shape="poly" coords="58,1241,82,1245,78,1270,53,1266" href="javascript:void(0)" id="ao_seat_A1_2" title="">
+
+                                <area shape="rect" coords="133,1294,159,1320" href="javascript:void(0)" id="ao_seat_B3_2" title="">
+                                <area shape="rect" coords="176,1294,202,1320" href="javascript:void(0)" id="ao_seat_B5_2" title="">
+                                <area shape="rect" coords="243,1294,269,1320" href="javascript:void(0)" id="ao_seat_B7_2" title="">
+                                <area shape="rect" coords="288,1294,314,1320" href="javascript:void(0)" id="ao_seat_B9_2" title="">
+                                <area shape="rect" coords="330,1294,357,1320" href="javascript:void(0)" id="ao_seat_B11_2" title="">
+                                <area shape="rect" coords="374,1294,400,1320" href="javascript:void(0)" id="ao_seat_B13_2" title="">
+                                <area shape="rect" coords="416,1294,442,1320" href="javascript:void(0)" id="ao_seat_B15_2" title="">
+                                <area shape="rect" coords="460,1294,486,1320" href="javascript:void(0)" id="ao_seat_B17_2" title="">
+                                <area shape="rect" coords="503,1294,529,1320" href="javascript:void(0)" id="ao_seat_B19_2" title="">
+                                <area shape="rect" coords="546,1294,572,1320" href="javascript:void(0)" id="ao_seat_B21_2" title="">
+                                <area shape="rect" coords="590,1294,616,1320" href="javascript:void(0)" id="ao_seat_B23_2" title="">
+                                <area shape="rect" coords="631,1294,659,1320" href="javascript:void(0)" id="ao_seat_B22_2" title="">
+                                <area shape="rect" coords="675,1294,701,1320" href="javascript:void(0)" id="ao_seat_B20_2" title="">
+                                <area shape="rect" coords="718,1294,744,1320" href="javascript:void(0)" id="ao_seat_B18_2" title="">
+                                <area shape="rect" coords="763,1294,789,1320" href="javascript:void(0)" id="ao_seat_B16_2" title="">
+                                <area shape="rect" coords="806,1294,832,1320" href="javascript:void(0)" id="ao_seat_B14_2" title="">
+                                <area shape="rect" coords="849,1294,874,1320" href="javascript:void(0)" id="ao_seat_B12_2" title="">
+                                <area shape="rect" coords="891,1294,917,1320" href="javascript:void(0)" id="ao_seat_B10_2" title="">
+                                <area shape="rect" coords="936,1294,963,1320" href="javascript:void(0)" id="ao_seat_B8_2" title="">
+                                <area shape="rect" coords="996,1294,1023,1320" href="javascript:void(0)" id="ao_seat_B6_2" title="">
+                                <area shape="rect" coords="1041,1294,1068,1320" href="javascript:void(0)" id="ao_seat_B4_2" title="">
+                                <area shape="poly" coords="1100,1291,1126,1287,1129,1313,1105,1316" href="javascript:void(0)" id="ao_seat_B2_2" title="">
+                                <area shape="poly" coords="70,1288,96,1292,91,1318,66,1312,70,1288,70,1288" href="javascript:void(0)" id="ao_seat_B1_2" title="">
+                            </MAP>
+
+                        </div>
+                    </div>
+                    <!--div class="stage-zone stage-zone--saigon">
+                        <div class="inner">
+                            <figure class="legend">
+                                <img src="images/legend-saigon.png" alt=""/>
+                            </figure>
+                            <figure class="seat-status">
+                                <img src="images/seat-status-saigon.png" alt=""/>
+                            </figure>
+                            <figure class="stage">
+                                <img src="images/stage-saigon.png" alt=""/>
+                            </figure>
+                        </div>
+                    </div-->
+                    <div class="booking-info booking-info--selecting">
+                        <div class="booking-summary booking-summary--name">
+                            <div class="clearfix">
+                                <h3>You are selecting <span id="selTotal">0 tickets</span></h3>
+                                <div class="booking-summary--selecting">
+                                    <p>
+                                        <span class="label">Floor:</span>
+                                        <span class="value" id="floor"></span>
+                                    </p>
+                                    <p>
+                                        <span class="label">Zone:</span>
+                                        <span class="value" id="tk_class"></span>
+                                    </p>
+                                    <p>
+                                        <span class="label">Seat NO.:</span>
+                                        <span class="value"><span class="color" id="selected_seat"></span></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="form-field">
+                                    <label class="form-label">Please insert <strong>No. of children</strong> included in your booking to enjoy child policy:</label>
+                                    <div class="input-group">
+                                        <select class="input-control" id="selChild">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-group">
+                                <button class="button" id="btnSubmit">CONFIRM BOOKING</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Data block -->
+        <script src="/Scripts/dev/gw_bookinginfo.js"></script>
+        <script language="javascript">
+            $(document).ready(function () {
+                $("#map-tag area").click(function () {
+                    if ($(this).hasClass('aolocked')) {
+
+                        return false;
+                    } else {
+                        if(selected) return;
+                        if (!$(this).hasClass('selected')) {
+                            if(current >= totalseat) {
+                                AO2_Alert("", "Maximum 10 seats per booking. Kindly make another booking for the additonal seats other than these 10.");
+                                return false;
+                            }
+                            var res = $(this).attr('id').split("_");
+                            if (res.length == 4) {
+                                var seatno = res[2];
+                                if (seatno == "1A" || seatno == "1B" || seatno == "2A" || seatno == "2B" || seatno == "3A" || seatno == "3B" || seatno == "4A" || seatno == "4B") {
+                                    if(current + 1 >= totalseat) {
+                                        AO2_Alert("AO Show","Can not select Vip Cabin");
+                                        return false;
+                                    }
+                                }
+                                if($(this).attr('id').indexOf("\'") > 1) {
+                                    AO2_Alert("","Please contact with Reservation/Call Center or Email.");
+                                    return false;
+                                }
+                                var floor = res[3];
+
+                                var seatInfo = getSeat(seatno,floor);
+                                if(currentClass == "" || current == 0) {
+
+                                    currentClass = seatInfo["tk_id"];
+                                    currentClassName = seatInfo["tk_name"];
+                                    currentFloor = seatInfo["floor"];
+                                } else {
+                                    if(currentClass != seatInfo["tk_id"]) {
+                                        AO2_Alert("","Selected seats in 1 booking should be in the same zone. Please make seperate bookings if you would like to book seats in different zones");
+                                        return false;
+                                    }
+                                }
+                                if(currentFloor != seatInfo["floor"]) {
+                                    AO2_Alert("","All the selected seat must have same a floor.");
+                                    return false;
+                                }
+                            }
+                            $(this).data('maphilight', { alwaysOn: true, fillColor: '5CFA00', stroke: false }).trigger('alwaysOn.maphilight');
+                            $(this).addClass('selected');
+                            //checkseat($(this).attr('id'));
+                            current ++;
+                            keepSeat(seatno,floor);
+                            var seatInfo = getSeat(seatno,floor);
+                            $('#floor').html("<span style='font-weight:bold'>"+getLaborFloor(floor)+ "</span>");
+                            $('#seats').html(getSelectedSeat());
+                            $('#tk_class').html("<span style='font-weight:bold'>"+seatInfo["tk_name"]+ "</span>");
+
+
+
+                        } else {
+
+                            $(this).data('maphilight', { alwaysOn: false }).trigger('alwaysOn.maphilight');
+                            $(this).removeClass('selected');
+                            $('#seats').html(getSelectedSeat());
+                            var res = $(this).attr('id').split("_");
+                            if (res.length == 4) {
+                                var seatno = res[2];
+                                var floor = res[3];
+                                removeKeepSeat(seatno,floor);
+                                if (seatno == "1A") {
+                                    $('#ao_seat_1B_' + floor).data('maphilight', { alwaysOn: false }).trigger('alwaysOn.maphilight');
+                                    $('#ao_seat_1B_' + floor).removeClass('selected');
+                                    removeKeepSeat("1B", floor);
+
+                                    current --;
+                                }
+                                if (seatno == "1B") {
+                                    $('#ao_seat_1A_' + floor).data('maphilight', { alwaysOn: false }).trigger('alwaysOn.maphilight');
+                                    $('#ao_seat_1A_' + floor).removeClass('selected');
+                                    removeKeepSeat("1A", floor);
+                                    current --;
+                                }
+                                if (seatno == "2A") {
+                                    $('#ao_seat_2B_' + floor).data('maphilight', { alwaysOn: false }).trigger('alwaysOn.maphilight');
+                                    $('#ao_seat_2B_' + floor).removeClass('selected');
+                                    removeKeepSeat("2B", floor);
+                                    current --;
+                                }
+                                if (seatno == "2B") {
+                                    $('#ao_seat_2A_' + floor).data('maphilight', { alwaysOn: false }).trigger('alwaysOn.maphilight');
+                                    $('#ao_seat_2A_' + floor).removeClass('selected');
+                                    removeKeepSeat("2A", floor);
+                                    current --;
+                                }
+                                if (seatno == "3A") {
+                                    $('#ao_seat_3B_' + floor).data('maphilight', { alwaysOn: false }).trigger('alwaysOn.maphilight');
+                                    $('#ao_seat_3B_' + floor).removeClass('selected');
+                                    removeKeepSeat("3B", floor);
+                                    current --;
+                                }
+                                if (seatno == "3B") {
+
+                                    $('#ao_seat_3A_' + floor).data('maphilight', { alwaysOn: false }).trigger('alwaysOn.maphilight');
+                                    $('#ao_seat_3A_' + floor).removeClass('selected');
+                                    removeKeepSeat("3A", floor);
+                                    current --;
+                                }
+                                if (seatno == "4A") {
+                                    $('#ao_seat_4B_' + floor).data('maphilight', { alwaysOn: false }).trigger('alwaysOn.maphilight');
+                                    $('#ao_seat_4B_' + floor).removeClass('selected');
+                                    removeKeepSeat("4B", floor);
+                                    current --;
+                                }
+                                if (seatno == "4B") {
+                                    $('#ao_seat_4A_' + floor).data('maphilight', { alwaysOn: false }).trigger('alwaysOn.maphilight');
+                                    $('#ao_seat_4A_' + floor).removeClass('selected');
+                                    removeKeepSeat("4A", floor);
+                                    current --;
+                                }
+                                $('#seats').html(getSelectedSeat());
+                            }
+
+                            current --
+                        }
+                    }
+
+                });
+
+            });
+            function loadLockedDefault() {
+                lockseat('A1', '0');
+                lockseat('A3', '0');
+                lockseat('A6', '0');
+                lockseat('A8', '0');
+                lockseat('A10', '0');
+                lockseat('A11', '0');
+                lockseat('A12', '0');
+                lockseat('A13', '0');
+                lockseat('A14', '0');
+                lockseat('A18', '0');
+                lockseat('A19', '0');
+                lockseat('A20', '0');
+                lockseat('B6', '0');
+                lockseat('B8', '0');
+                lockseat('B19', '0');
+                lockseat('B20', '0');
+                lockseat('C1', '0');
+                lockseat('C3', '0');
+                lockseat('C5', '0');
+                lockseat('C7', '0');
+                lockseat('C19', '0');
+                lockseat('C20', '0');
+                lockseat('C21', '0');
+                lockseat('C22', '0');
+                lockseat('D1', '0');
+                lockseat('D2', '0');
+                lockseat('D3', '0');
+                lockseat('D4', '0');
+                lockseat('D5', '0');
+                lockseat('D6', '0');
+                lockseat('D7', '0');
+                lockseat('D8', '0');
+                lockseat('D9', '0');
+                lockseat('D11', '0');
+                lockseat('D13', '0');
+                lockseat('D15', '0');
+                lockseat('D17', '0');
+                lockseat('D19', '0');
+                lockseat('D20', '0');
+                lockseat('D21', '0');
+                lockseat('D22', '0');
+                lockseat('E1', '0');
+                lockseat('E1', '0');
+                lockseat('E2', '0');
+                lockseat('E3', '0');
+                lockseat('E3', '0');
+                lockseat('E4', '0');
+                lockseat('E5', '0');
+                lockseat('E5', '0');
+                lockseat('E6', '0');
+                lockseat('E7', '0');
+                lockseat('E7', '0');
+                lockseat('E8', '0');
+                lockseat('E9', '0');
+                lockseat('E9', '0');
+                lockseat('E11', '0');
+                lockseat('E11', '0');
+                lockseat('E13', '0');
+                lockseat('E13', '0');
+                lockseat('E15', '0');
+                lockseat('E15', '0');
+                lockseat('E17', '0');
+                lockseat('E17', '0');
+                lockseat('E19', '0');
+                lockseat('E19', '0');
+                lockseat('E20', '0');
+                lockseat('E21', '0');
+                lockseat('E21', '0');
+                lockseat('E22', '0');
+                lockseat('E23', '0');
+                lockseat('E23', '0');
+                lockseat('E24', '0');
+                lockseat('F1', '0');
+                lockseat('F1', '0');
+                lockseat('F2', '0');
+                lockseat('F3', '0');
+                lockseat('F3', '0');
+                lockseat('F4', '0');
+                lockseat('F5', '0');
+                lockseat('F5', '0');
+                lockseat('F6', '0');
+                lockseat('F7', '0');
+                lockseat('F7', '0');
+                lockseat('F8', '0');
+                lockseat('F9', '0');
+                lockseat('F9', '0');
+                lockseat('F11', '0');
+                lockseat('F11', '0');
+                lockseat('F13', '0');
+                lockseat('F13', '0');
+                lockseat('F15', '0');
+                lockseat('F15', '0');
+                lockseat('F17', '0');
+                lockseat('F17', '0');
+                lockseat('F19', '0');
+                lockseat('F19', '0');
+                lockseat('F20', '0');
+                lockseat('F21', '0');
+                lockseat('F21', '0');
+                lockseat('F22', '0');
+                lockseat('F23', '0');
+                lockseat('F23', '0');
+                lockseat('F24', '0');
+                lockseat('G1', '0');
+                lockseat('G1', '0');
+                lockseat('G3', '0');
+                lockseat('G3', '0');
+                lockseat('G5', '0');
+                lockseat('G5', '0');
+                lockseat('G7', '0');
+                lockseat('G7', '0');
+                lockseat('G9', '0');
+                lockseat('G9', '0');
+                lockseat('G11', '0');
+                lockseat('G11', '0');
+                lockseat('G13', '0');
+                lockseat('G13', '0');
+                lockseat('G15', '0');
+                lockseat('G15', '0');
+                lockseat('G17', '0');
+                lockseat('G17', '0');
+                lockseat('G19', '0');
+                lockseat('G19', '0');
+                lockseat('G20', '0');
+                lockseat('G21', '0');
+                lockseat('G21', '0');
+                lockseat('G22', '0');
+                lockseat('G23', '0');
+                lockseat('G23', '0');
+                lockseat('G24', '0');
+                lockseat('G25', '0');
+                lockseat('G25', '0');
+                lockseat('G26', '0');
+                lockseat('H2', '0');
+                lockseat('H4', '0');
+                lockseat('H6', '0');
+                lockseat('H8', '0');
+                lockseat('H19', '0');
+                lockseat('H20', '0');
+                lockseat('H21', '0');
+                lockseat('H22', '0');
+                lockseat('H23', '0');
+                lockseat('H24', '0');
+                lockseat('H25', '0');
+                lockseat('H26', '0');
+                lockseat('I1', '0');
+                lockseat('I3', '0');
+                lockseat('I5', '0');
+                lockseat('I7', '0');
+                lockseat('I19', '0');
+                lockseat('I20', '0');
+                lockseat('I21', '0');
+                lockseat('I22', '0');
+                lockseat('I23', '0');
+                lockseat('I24', '0');
+                lockseat('I25', '0');
+                lockseat('I26', '0');
+                lockseat('J2', '0');
+                lockseat('J4', '0');
+                lockseat('J6', '0');
+                lockseat('J8', '0');
+                lockseat('J19', '0');
+                lockseat('J20', '0');
+                lockseat('J21', '0');
+                lockseat('J22', '0');
+                lockseat('K1', '0');
+                lockseat('K3', '0');
+                lockseat('K5', '0');
+                lockseat('K7', '0');
+                lockseat('K19', '0');
+                lockseat('K20', '0');
+                lockseat('K21', '0');
+                lockseat('K22', '0');
+                lockseat('K23', '0');
+                lockseat('K24', '0');
+                lockseat('L2', '0');
+                lockseat('L4', '0');
+                lockseat('L6', '0');
+                lockseat('L8', '0');
+                lockseat('L19', '0');
+                lockseat('L20', '0');
+                lockseat('L21', '0');
+                lockseat('L22', '0');
+                lockseat('A1', '1');
+                lockseat('A3', '1');
+                lockseat('A5', '1');
+                lockseat('A7', '1');
+                lockseat('A9', '1');
+                lockseat('A11', '1');
+                lockseat('A13', '1');
+                lockseat('A15', '1');
+                lockseat('A17', '1');
+                lockseat('A19', '1');
+                lockseat('A21', '1');
+                lockseat('C1', '1');
+                lockseat('C2', '1');
+                lockseat('C3', '1');
+                lockseat('C4', '1');
+                lockseat('C9', '1');
+                lockseat('C11', '1');
+                lockseat('C13', '1');
+                lockseat('C15', '1');
+                lockseat('C17', '1');
+                lockseat('C17', '1');
+                lockseat('C18', '1');
+                lockseat('C18', '1');
+                lockseat('C19', '1');
+                lockseat('C19', '1');
+                lockseat('C20', '1');
+                lockseat('C20', '1');
+                lockseat('C21', '1');
+                lockseat('C21', '1');
+                lockseat('C22', '1');
+                lockseat('C22', '1');
+                lockseat('C23', '1');
+                lockseat('C23', '1');
+                lockseat('C24', '1');
+                lockseat('C24', '1');
+                lockseat('D1', '1');
+                lockseat('D2', '1');
+                lockseat('D7', '1');
+                lockseat('D7', '1');
+                lockseat('D8', '1');
+                lockseat('D8', '1');
+                lockseat('E1', '1');
+                lockseat('E2', '1');
+                lockseat('E3', '1');
+                lockseat('E4', '1');
+                lockseat('A1', '2');
+                lockseat('A2', '2');
+                lockseat('A3', '2');
+                lockseat('A4', '2');
+                lockseat('A5', '2');
+                lockseat('A6', '2');
+                lockseat('A7', '2');
+                lockseat('A8', '2');
+                lockseat('A9', '2');
+                lockseat('A10', '2');
+                lockseat('A11', '2');
+                lockseat('A12', '2');
+                lockseat('A13', '2');
+                lockseat('A14', '2');
+                lockseat('A15', '2');
+                lockseat('A16', '2');
+                lockseat('A17', '2');
+                lockseat('A18', '2');
+                lockseat('A19', '2');
+                lockseat('A20', '2');
+                lockseat('A21', '2');
+                lockseat('A22', '2');
+                lockseat('B1', '2');
+                lockseat('B2', '2');
+                lockseat('B3', '2');
+                lockseat('B4', '2');
+                lockseat('B5', '2');
+                lockseat('B6', '2');
+                lockseat('B7', '2');
+                lockseat('B7', '2');
+                lockseat('B8', '2');
+                lockseat('B8', '2');
+                lockseat('B9', '2');
+                lockseat('B10', '2');
+                lockseat('B11', '2');
+                lockseat('B12', '2');
+                lockseat('B13', '2');
+                lockseat('B14', '2');
+                lockseat('B15', '2');
+                lockseat('B16', '2');
+                lockseat('B17', '2');
+                lockseat('B18', '2');
+                lockseat('B19', '2');
+                lockseat('B20', '2');
+                lockseat('B21', '2');
+                lockseat('B22', '2');
+                lockseat('B23', '2');
+            }
+            //setTimeout('loadLockedDefault()', 500);
+            loadLockedDefault();
+        </script>
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="clearfix">
+                <ul class="nav">
+                    <li class="item">
+                        <a href="#">About Show</a>
+                        <ul>
+                            <li><a href="#">A O Show</a></li>
+                            <li><a href="#">My Village</a></li>
+                            <li><a href="#">The Mist</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="#">Customer Service</a>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Term &amp; Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="#">Corporate</a>
+                        <ul>
+                            <li><a href="#">Press &amp; Partnership</a></li>
+                            <li><a href="#">Recruitment</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="info">
+                    <p><a href="/gw/booking.html" class="button button--footer">BUY TICKETS</a></p>
+                    <p><a href="tel:+84 1245 18 11 88" class="phone">+84 1245 18 11 88</a></p>
+                    <p class="social">
+                        <span>&nbsp;<span>FOLLOW</span></span>
+                        <a href="#" class="facebook"></a>
+                        <a href="#" class="instagram"></a>
+                        <a href="#" class="youtube"></a>
+                    </p>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2016 Lune Production</div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script src="/Scripts/guest/global.js"></script>
+<script src="/Scripts/guest/jquery.bpopup.min.js"></script>
+
+
+
+</body>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-16166011-33', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</html>

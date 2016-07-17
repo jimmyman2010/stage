@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Booking - Lune Production</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://dev.luneproduction.com/Content/guest/css/vendor.min.css">
+    <link rel="stylesheet" href="http://dev.luneproduction.com/Content/guest/css/global.min.css">
+    <link rel="stylesheet" href="css/fix.css">
+    <base href="http://dev.luneproduction.com/" />
+    <script src="/Scripts/libs/jquery.js"></script>
+    <script src="/Scripts/dev/resource.js"></script>
+    <script src="/Scripts/dev/common.js"></script>
+
+</head>
+<body>
+<div id="tab_ajax_loading" style="display:none;position:fixed;z-index:999;right:20px;">
+
+</div>
+<div id="noticePopup" class="zoom-anim-dialog  popup-global" style="display:none">
+    <div class="popup--header">
+        Lune Production
+    </div>
+    <div class="popup--content">
+        <p>The online booking for this show is closed. Please come to our Box Office at the Saigon Opera House to check available seats.</p>
+        <a href="javascript:void(0);" class="button button--close">CLOSE</a>
+    </div>
+    <button title="Close (Esc)" type="button" class="mfp-close button b-close">×</button>
+</div>
+<div class="site-container">
+    <!--header class="header">
+
+    </header-->
+
+    <main class="ticket-page" role="main">
+
+        <section class="module module--select-show">
+            <header>
+                <div class="container">
+                    <a href="http://www.luneproduction.com/" class="button button--home">BACK TO HOMEPAGE</a>
+                    <ul class="step-by-step">
+                        <li class="active"><a href="javascript:void(0);">1. Select Show</a></li>
+                        <li><a href="javascript:void(0);">2. Select Tickets</a></li>
+                        <li><a href="javascript:void(0);">3. Buy Tickets</a></li>
+                    </ul>
+
+                </div>
+            </header>
+            <div class="module--content">
+                <div class="container">
+
+                    <div class="step">
+                        <div class="inner">
+                            <span>
+                                1. <br/> Select Show
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="bamboo-box">
+                        <div class="form-field">
+                            <div class="input-group">
+                                <select  id="sid" name="sid" class="input-control" onchange="loadDate(currentMonth, currentYear)">
+                                    <option value="0">Select Show</option>
+                                    <option                                                 value="202437990">A O SHOW</option>
+                                    <option                                                 value="203337990">AA1</option>
+                                    <option                                                 value="203537990">Anh Tuan Test 1</option>
+                                    <option                                                 value="202737990">BC show</option>
+                                    <option                                                 value="203837990">LANG TOI</option>
+                                    <option                                                 value="203737990">L&#224;ng T&#244;i - huỷ</option>
+                                    <option                                                 value="203137990">Naratan</option>
+                                    <option                                                 value="203237990">Nura</option>
+                                    <option                                                 value="203437990">test</option>
+                                    <option                                                 value="203637990">Test 4</option>
+                                    <option                                                 value="202537990">THE MIST</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <div class="input-group">
+                                <select name="lid" id="lid" class="input-control" onchange="loadDate(currentMonth, currentYear)">
+                                    <option value="0">Select City</option>
+                                    <option                                                 value="202437990">Ho Chi Minh</option>
+                                    <option                                                 value="202537990">Ha Noi</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="show-results">
+                        <div class="nav-monthly">
+                            <a class="prev" id="lnk_pre_month" href="javascript:void(0);"></a>
+                            <span class="current" id="calender_title"> JUNE 2016</span>
+                            <a class="next" id="lnk_next_month" href="javascript:void(0);"></a>
+                        </div>
+                        <ul class="weekdays">
+                            <li>MON</li>
+                            <li>TUE</li>
+                            <li>WED</li>
+                            <li>THU</li>
+                            <li>FRI</li>
+                            <li>SAT</li>
+                            <li>SUN</li>
+                        </ul>
+                        <ul class="calender" id="calender_board">
+                            <li class="calender--date calender--date--no-show week-1">
+                                <div class="date"><span class="weekday">WED</span>1</div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="/Scripts/dev/gw_home.js"></script>
+        <script language="javascript">
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            var myTimer;
+            var view_mode = "";
+            function getDaysInMonth(month, year) {
+                var date = new Date(year, month, 1);
+                var days = [];
+                while (date.getMonth() === month) {
+                    days.push(new Date(date));
+                    date.setDate(date.getDate()+1);
+                }
+                return days;
+            }
+            function formatDate(today, format) {
+                var dd = today.getDate();
+                var mm = today.getMonth() + 1; //January is 0!
+
+                var yyyy = today.getFullYear();
+                if (dd < 10) {
+                    dd = '0' + dd
+                }
+                if (mm < 10) {
+                    mm = '0' + mm
+                }
+                switch (format) {
+                    case "dd/mm/yyyy":
+                        return dd + '/' + mm + '/' + yyyy;
+                    case "mm/dd/yyyy":
+                        return dd + '/' + mm + '/' + yyyy;
+                    case "yyyymmdd":
+                        return yyyy + '' + mm + '' + dd;
+                }
+
+            }
+            function formatStringDate(today) {
+                var tmp = today.split("/");
+                return tmp[2] + tmp[0] + tmp[1];
+            }
+            function loadDate(selMonth, selYear) {
+                $('#calender_board').html('');
+                var now = new Date();
+                var days = getDaysInMonth(selMonth, selYear);
+                var out = "";
+                var startDate = days[0].getDay();
+                var endDate = days[days.length - 1].getDay();
+                if (startDate == 0) {
+                    startDate = 6;
+                } else {
+                    startDate--;
+                }
+                //alert(days[0].getDay() + "=" + days[0]);
+                var begin = 0;
+                var current_week = 1;
+                for (var i = 0; i < startDate; i++) {
+                    out += "<li class=\"calender--date calender--date--other week-1\"></li>";
+                    begin++;
+                }
+                //alert(startDate);
+                for (var i = 0; i < days.length; i++) {
+                    var current = "";
+                    if (begin % 7 == 0) current_week++;
+                    if (now.getDate() == days[i].getDate() && now.getMonth() == days[i].getMonth() && now.getYear() == days[i].getYear()) {
+                        current = "calender--date-current";
+                    }
+                    out += "<li class=\"calender--date calender--date--has-show " + current + " week-" + current_week + "\"><div class=\"date\">" + (days[i].getDate()) + "</div><ul  id='date_data_" + formatDate(days[i], "yyyymmdd") + "'></ul></li>";
+
+                    begin++;
+                }
+                if (endDate != 0) {
+                    for (var i = endDate; i < 7; i++) {
+                        if (begin % 7 == 0) current_week++;
+                        out += "<li class=\"calender--date calender--date--other week-" + current_week + "\"></li>";
+                        begin++;
+                    }
+                }
+                $('#calender_board').html(out);
+                $('#calender_title').html(months[selMonth] + " " + selYear);
+                loadCalendar(days);
+            }
+            var now = new Date();
+            var currentMonth = now.getMonth();
+            var currentYear = now.getFullYear();
+
+            loadDate(currentMonth, currentYear);
+
+            $('#lnk_pre_month').click(function () {
+                if (currentMonth > 0) {
+                    currentMonth--;
+
+                } else {
+                    currentMonth = 12;
+                    currentYear--;
+                }
+                loadDate(currentMonth, currentYear);
+            });
+            $('#lnk_next_month').click(function () {
+                if (currentMonth < 11) {
+                    currentMonth++;
+                } else {
+                    currentMonth = 0;
+                    currentYear++;
+                }
+                loadDate(currentMonth, currentYear);
+            });
+            function loadCalendar(days) {
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    async: true,
+                    url: "/Guest/LoadCalendard?lid=" + $('#lid').val() + "&sid=" + $('#sid').val() + "&start=" + (days[0].getTime() / 1000) + "&end=" + (days[days.length - 1].getTime() / 1000) + "",
+                    data: {}
+                }).done(function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        var item = data[i];
+                        var dateString = formatStringDate(item['start']);
+                        if ($('#item_show_' + item['sid'] + "_" + dateString).html() == undefined) {
+
+                            $('#date_data_' + dateString).append("<li id='item_show_" + item['sid'] + "_" + dateString + "' class=\"" + item['className'] + "\"><h4>" + item['show'] + "</h4><span>" + item['venue'] + "</span><p id='calendar_timeline_" + item['sid'] + "_" + dateString + "'></p></li>");
+                        }
+                        $("#calendar_timeline_" + item['sid'] + "_" + dateString).append("<a data-placement=\"top\" tooltip-data='" + item['id'] + "-" + item['venue_id'] + "-" + item['show_id'] + "-" + item['sid'] + "-" + item['className'] + "' class=\"masterTooltip\" href=\"javascript:void(0);\" onclick=\"chooseShow('" + item['id'] + "','" + item['start'] + "')\"><span>" + item['showtime'] + "</span></a>");
+                    }
+
+                    var width = $(window).outerWidth();
+                    for (var i = 1; i <= 53; i++) {
+                        var week = $('.week-' + i);
+
+                        week.removeAttr('style');
+
+                        if (width >= 768) {
+                            if (week.length > 0) {
+                                maxHeight = Math.max.apply(null, week.map(function () {
+                                    return $(this).height();
+                                }).get());
+                                week.height(maxHeight);
+                            }
+                        }
+                    }
+                    $('.masterTooltip').hover(function () {
+                        // Hover over code
+                        //var title = $(this).attr('title');
+                        var data = $(this).attr('tooltip-data');
+                        var arrData = data.split("-");
+                        var title = "<span class=\"" + arrData[4] + "\"><span>Price</span><span id='fill_price'>Waitting ...</span></span>";
+
+                        $(this).data('tipText', title).removeAttr('title');
+                        $('<p class="tooltip"></p>').html(title).appendTo('body').fadeIn('slow');
+                        switch (arrData[4]) {
+                            case "show_active_the_mist":
+                                $('.tooltip').css('background-color', '#79752f');
+
+                                break;
+                            case "show_active_lang_toi":
+                                $('.tooltip').css('background-color', '#a26828');
+
+                                break;
+                            default:
+                                $('.tooltip').css('background-color', '#2d803b');
+
+
+                        }
+                        timeshowTooltip = 1;
+                        myTimer = setTimeout(function () {
+                            if (timeshowTooltip == 1) {
+                                $.ajax({
+                                    type: "POST",
+                                    async: true,
+                                    url: "/Guest/LoadCalendardPrice?showtime=" + arrData[0] + "&show_id=" + arrData[1] + "&venue_id=" + arrData[2] + "&sid=" + arrData[3],
+                                    data: {}
+                                }).done(function (data) {
+
+                                    $('#fill_price').html("From: " + data + " VND");
+                                });
+                                timeshowTooltip = 0;
+                            }
+                        }, 3000);
+                    }, function () {
+                        // Hover out code
+                        $(this).attr('title', $(this).data('tipText'));
+                        $('.tooltip').remove();
+                        timeshowTooltip = 0;
+                        clearTimeout(myTimer);
+                    }).mousemove(function (e) {
+                        var mousex = e.pageX + 10; //Get X coordinates
+                        var mousey = e.pageY - 70; //Get Y coordinates
+                        $('.tooltip')
+                                .css({ top: mousey, left: mousex })
+                    });
+                });
+            }
+            function chooseShow(showtime,currentdate) {
+                var tmp = currentdate.split("/");
+                var month = tmp[0];
+                var day = tmp[1];
+                var year = tmp[2];
+                var today = new Date();
+                if (year == today.getFullYear() && month == today.getMonth() && day == today.getDate() && today.getHours() >= 9) {
+                    AO2_Alert('', "The online booking for this show is now closed. Please visit our Opera House Box Office at the respective city where you are to check available seats.");
+                    return false;
+                }
+                selectShowTime(showtime);
+            }
+
+            var timeshowTooltip = 0;
+
+        </script>
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+
+
+
+            });
+        </script>
+        <script type="text/javascript" src="/Scripts/guest/iframeResizer.contentWindow.min.js"  defer></script>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="clearfix">
+                <ul class="nav">
+                    <li class="item">
+                        <a href="#">About Show</a>
+                        <ul>
+                            <li><a href="#">A O Show</a></li>
+                            <li><a href="#">My Village</a></li>
+                            <li><a href="#">The Mist</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="#">Customer Service</a>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Term &amp; Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="#">Corporate</a>
+                        <ul>
+                            <li><a href="#">Press &amp; Partnership</a></li>
+                            <li><a href="#">Recruitment</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="info">
+                    <p><a href="/gw/booking.html" class="button button--footer">BUY TICKETS</a></p>
+                    <p><a href="tel:+84 1245 18 11 88" class="phone">+84 1245 18 11 88</a></p>
+                    <p class="social">
+                        <span>&nbsp;<span>FOLLOW</span></span>
+                        <a href="#" class="facebook"></a>
+                        <a href="#" class="instagram"></a>
+                        <a href="#" class="youtube"></a>
+                    </p>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2016 Lune Production</div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script src="/Scripts/guest/global.js"></script>
+<script src="/Scripts/guest/jquery.bpopup.min.js"></script>
+
+
+
+</body>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-16166011-33', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</html>

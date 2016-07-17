@@ -1,0 +1,32 @@
+.module{
+    padding-top: 41px;
+}
+.module > header{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .module{
+        padding-top: 62px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .module--booking .booking-info--selecting{
+        position: fixed;
+        top: 62px;
+        left: 50%;
+        margin-left: 0;
+        z-index: 99;
+    }
+    .module--booking .booking-summary{
+        position: fixed;
+        top: 62px;
+        left: 0;
+        z-index: 99;
+    }
+}
