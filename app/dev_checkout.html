@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>BookingPayment - Lune Production</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://dev.luneproduction.com/Content/guest/css/vendor.min.css">
+    <link rel="stylesheet" href="http://dev.luneproduction.com/Content/guest/css/global.min.css">
+    <link rel="stylesheet" href="css/fix.css">
+    <base href="http://dev.luneproduction.com/" />
+    <script src="/Scripts/libs/jquery.js"></script>
+    <script src="/Scripts/dev/resource.js"></script>
+    <script src="/Scripts/dev/common.js"></script>
+
+</head>
+<body>
+<div id="tab_ajax_loading" style="display:none;position:fixed;z-index:999;right:20px;">
+
+</div>
+<div id="noticePopup" class="zoom-anim-dialog  popup-global" style="display:none">
+    <div class="popup--header">
+        Lune Production
+    </div>
+    <div class="popup--content">
+        <p>The online booking for this show is closed. Please come to our Box Office at the Saigon Opera House to check available seats.</p>
+        <a href="javascript:void(0);" class="button button--close">CLOSE</a>
+    </div>
+    <button title="Close (Esc)" type="button" class="mfp-close button b-close">×</button>
+</div>
+<div class="site-container">
+    <!--header class="header">
+
+    </header-->
+
+    <main class="ticket-page" role="main">
+        <section class="module module--confirm-booking">
+            <header>
+                <div class="container">
+                    <a href="http://www.luneproduction.com/" class="button button--home">BACK TO HOMEPAGE</a>
+                    <ul class="step-by-step">
+                        <li><a href="javascript:void(0);">1. Select Show</a></li>
+                        <li><a href="javascript:void(0);">2. Select Tickets</a></li>
+                        <li class="active"><a href="javascript:void(0);">3. Buy Tickets</a></li>
+                    </ul>
+                    <div id="CountDownTimer" class="countdown" data-timer="68.2764282226563" style="height: 65px;color:#8dc63f"></div>
+                </div>
+            </header>
+            <div class="module--content"  id="tab_confirm">
+                <div class="container">
+                    <div class="step">
+                        <div class="inner">
+                            <span>
+                                3. <br/> Buy Tickets
+                            </span>
+                        </div>
+                    </div>
+                    <div class="booking-info">
+                        <div class="booking-summary">
+                            <div class="booking-summary--name">
+                                <p>
+                                    <span class="label">Show Name:</span>
+                                    <span class="value">A O SHOW</span>
+                                </p>
+                                <p>
+                                    <span class="label">Venue:</span>
+                                    <span class="value">Saigon Opera House</span>
+                                </p>
+                                <p>
+                                    <span class="label">Address:</span>
+                                    <span class="value">07 Cong Truong Lam Son, Dist. 1, Ho Chi Minh.</span>
+                                </p>
+                                <p>
+                                    <span class="label">Show time:</span>
+                                    <span class="value"><span class="color">Thu, 28-Jul-2016 at 20:00</span></span>
+                                </p>
+                            </div>
+                            <div class="booking-summary--selected">
+                                <p>
+                                    <span class="label">Booked:</span>
+                                    <span class="value"><span class="color">2 Tickets</span> <span class="baby">including 0</span></span>
+                                </p>
+                                <p>
+                                    <span class="label">Floor:</span>
+                                    <span class="value">GROUND FLOOR</span>
+                                </p>
+                                <p>
+                                    <span class="label">Zone:</span>
+                                    <span class="value">ooh! [O]</span>
+                                </p>
+                                <p>
+                                    <span class="label">Seat NO.:</span>
+                                    <span class="value"><span class="color">
+F10                                            -
+F12                                    </span></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="tab_policy">
+                        </div>
+
+
+
+                        <div class="action-group">
+                            <a href="javascript:void(0)" id="btConfirmBooking" class="button button--bigger">BUY TICKETS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="module--content" id="tab_process" style="display:none">
+                <form id="frmBooking" name="frmBooking" method="post" action="/Guest/ProceedBooking">
+                    <input type="hidden" value="e44363f6-c479-46c6-aa9c-7db7af5d9a79" id="form_token" name="form_token" />
+                    <input type="hidden" name="guestType" value="1" />
+                    <div class="container">
+                        <fieldset class="site-form">
+                            <form id="submitPayment">
+                                <div class="form-info form-info--general">
+                                    <div class="form-field">
+                                        <label class="form-label">Full Name <span>*</span></label>
+                                        <div class="input-group">
+                                            <input type="text"  name="bookerName" id="bookerName" class="input-control required"/>
+                                            <label id="bookerName-error" class="error" style="display:none"></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-field">
+                                        <label class="form-label">Email <span>*</span></label>
+                                        <div class="input-group">
+                                            <input type="text"  id="bookerEmail" name="bookerEmail" class="input-control required email"/>
+                                            <label id="bookerEmail-error" class="error" style="display:none"></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-field">
+                                        <label class="form-label">Confirm Email <span>*</span></label>
+                                        <div class="input-group">
+                                            <input type="text"  id="bookerConfirmEmail" name="bookerConfirmEmail" class="input-control required email"/>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <div class="form-field form-field--half">
+                                            <label class="form-label">Phone <span>*</span></label>
+                                            <div class="input-group">
+                                                <input type="tel"  id="bookerPhone" name="bookerPhone" class="input-control required"/>
+                                                <label id="bookerPhone-error" class="error" style="display:none"></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-field form-field--half last">
+                                            <label class="form-label">Nationality <span>*</span></label>
+                                            <div class="input-group required">
+                                                <select  id="bookerCountry" name="bookerCountry" class="input-control">
+
+                                                    <script language="javascript">
+
+                                                        for (var hi = 0; hi < states.length; hi++)
+                                                            document.write("<option value=\"" + states[hi] + "\">" + states[hi] + "</option>");
+                                                    </script>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-info form-info--payment">
+                                    <h4 class="form-info--header">Payment Method <span>*</span></h4>
+                                    <div class="form-info--content">
+                                        <div class="form-field form-field--radio">
+
+                                            <label class="item">
+                                                <input type="radio" name="paymethod" id="paymethod_migs" checked="checked" value="3" />
+                                                <span><span></span>Credit Card via OnePay</span>
+                                            </label>
+                                            <label class="item">
+                                                <input type="radio" name="paymethod" id="paymethod_paysmartlink" value="1" />
+                                                <span><span></span>ATM Card via OnePay</span>
+                                            </label>
+                                            <label class="item">
+                                                <input type="radio" name="paymethod" id="paymethod_paypal" value="2"/>
+                                                <span><span></span>Paypal Account</span>
+                                            </label>
+
+                                            <label class="item">
+                                                <input type="radio" name="paymethod" id="paymethod_paypal2" value="2"/>
+                                                <span><span></span>Credit Card via Paypal</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-field form-field--textarea">
+                                            <label class="form-label">Special Request</label>
+                                            <div class="input-group">
+                                                <textarea class="input-control" id="bookerNote" name="bookerNote"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-info form-info--survey">
+                                    <h4 class="form-info--header">How do you know about our show?</h4>
+                                    <div class="form-info--content">
+                                        <div class="form-field form-field--radio">
+                                            <label class="item">
+                                                <input type="radio" name="survey" value="Trip Advisor"/>
+                                                <span><span></span>Trip Advisor</span>
+                                            </label>
+                                            <label class="item">
+                                                <input type="radio" name="survey" value="Friends' Recommendation" />
+                                                <span><span></span>Friends' Recommendation</span>
+                                            </label>
+                                            <label class="item">
+                                                <input type="radio" name="survey" value="Online Search" />
+                                                <span><span></span>Online Search</span>
+                                            </label>
+                                            <label class="item">
+                                                <input type="radio" name="survey" value="Tour Guide's Recommendation" />
+                                                <span><span></span>Tour Guide's Recommendation</span>
+                                            </label>
+                                            <label class="item">
+                                                <input type="radio" name="survey" value="Travel Agency" />
+                                                <span><span></span>Travel Agency</span>
+                                            </label>
+                                            <label class="item">
+                                                <input type="radio" name="survey" value="Online travel websites / communities" />
+                                                <span><span></span>Online travel websites / communities </span>
+                                            </label>
+                                            <label class="item">
+                                                <input type="radio" name="survey" value="Newspapers / Magazines" />
+                                                <span><span></span>Newspapers / Magazines </span>
+                                            </label>
+                                            <label class="item">
+                                                <input type="radio" name="survey" value="Others" />
+                                                <span><span></span>Others (please specify) </span>
+                                                <div class="input-group">
+                                                    <input type="text" name="doyouknow" id="doyouknow" onfocus="$('input:radio[name=survey]').filter('[value=Others]').attr('checked', true);" class="input-control"/>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-info form-info--term">
+                                    <div class="form-info--content">
+                                        <div class="scroll">
+                                            <p><strong>Terms and Conditions for Online Booking</strong></p>
+                                            <br/>
+                                            <p>This section applies specifically to the booking functions available on this site. When using Lune Production JSC’s online booking facility to make a reservation, you signify your agreement to all applicable terms, conditions, and notices, including but not limited to the Conditions of Use. If this is not your intention and/or you disagree with any part of applicable terms and conditions, DO NOT USE this facility.</p>
+                                            <p><strong>Terms and conditions of using online booking facility:</strong></p>
+                                            <p>1) The online booking facility is only for your personal and non-commercial use. You are not permitted to modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell any information, software, products or services obtained from the online booking facility.</p>
+                                            <p>2) The online booking facility is solely to assist you in displaying the availability of travel-related services and to make legitimate reservations. Abuse of the online booking facility may cause you to be denied of accessing and/or using it.</p>
+                                            <p>3) Please check this document periodically for changes. Lune Production JSC reserves the right, at its discretion, to change, modify, add, or remove portions of these Conditions of Use at any time, and your continued use of this online booking after any such changes shall constitute your consent to such changes.</p>
+                                            <p>4) All applicable terms and conditions will fully apply to your reservation and purchase of services as well as all charges, fees, duties, taxes, and assessments arising out of the use of the online booking facility.</p>
+                                            <p><strong>Guideline for Online Booking</strong></p>
+                                            <p><strong>General</strong></p>
+                                            <p>- Reservations can be made for multiple clients.</p>
+                                            <p>- Reservations are subject to the availability of seat. Website fares are exclusive for website purchase.</p>
+                                            <p>- Tickets booked must be made under the same reservation</p>
+                                            <p>- Each online transaction is limited to 10 tickets in maximum. If the number of tickets exceeding maximum permitted per transaction, please email to <a href="mailto:reservation@luneproduction.com">reservation@luneproduction.com</a>.</p>
+                                            <p><strong>Delivery</strong></p>
+                                            <p>- Customer will receive a confirmation letter, with an attached E ticket, via registered email within 60 minutes after successful booking. This e ticket will include information of booking and customer in details. By any means, you need to bring this E ticket to Lune Production Ticket Office in order to receive the physical tickets.</p>
+                                            <p>- If you do not receive confirmation email from Lune Production JSC within 60 minutes after successful booking, please contact Lune Production JSC hotline for tickets booked on the website via telephone number: (84) (8) 35 18 11 88 and/or (84) (0) 1245 18 11 88 - (0) 1245 18 11 88 or email: reservation@luneproduction.com for supports.</p>
+                                            <p>- Lune Production do not have any responsibilities, regarding details of your registered information, email.</p>
+                                            <p>- After successfully sending booking confirmation letter to registered emails, there will be no assigned responsibilities or supports from us to your absence at the show or any technical issues that lead to the loss of this booking confirmation letter.</p>
+                                            <p>- On rare occasions, booking confirmation letter will be unintentionally in your spam mail. Please check both inbox and spam before addressing this issue to us.</p>
+                                            <p><strong>Cancellation, refunds and exchanges</strong></p>
+                                            <p>- There will be no available services for cancellation/return/refund after successful online payment. We only accept to refund in the conditions:</p>
+                                            <p>1. Your banking account directly received a deduced amount from purchasing Lune Production’s tickets while our system have not indicated your booking, and there is no confirmation letter sent to designated email.</p>
+                                            <p>2. The show is cancelled or postponed due to weather conditions or other unexpected circumstances such as protests, which cause to unable to hold show as scheduled. If the show was cancelled/ rescheduled, you will be offered seats at any rescheduled show, with equivalent value of original booking. Lune Production will offer refund if you are unable to attend such event.</p>
+                                            <p>- For refund of your ticket(s) purchased, you can contact Lune Production Ticketing office. In case of cancellation/ rescheduling, we will use our reasonable endeavors to notify you using details you provided us with the time of ordering. Lune Production does not guarantee that you will be informed of such cancellation/ rescheduled before the date of the show.</p>
+                                            <p>- Refunds, if applicable, at the discretion of the Management, will only be made to the debit/credit card used for the original transaction. Refunds will be made within 7 working days.</p>
+                                            <p>- For ticket changes including rebook, upgrading, ticket extension, please contact Lune Production JSC Ticketing office.</p>
+                                            <p><strong>Other requirements</strong></p>
+                                            <p>- Fare includes VAT which must be paid. Such information may be quoted with the fare, and included in the total amount.</p>
+                                            <p>- You represent that you are of legal age to use the booking facility in accordance with these Conditions of Use and to have legal obligations for any liability you may incur as a result of the use of the online booking facility. You are financially responsible for all uses of this site by yourself and those using your login information and reservation number. You will supervise all usage of the only booking facility under your name or account. You warrant that all information supplied by you and members of your household in using the booking facility are true and accurate.</p>
+                                            <p>- For ticket(s) purchased using Visa/MasterCard/JCB, the card holder may be required to verify the payment card at the time of check-in or at Lune Production JSC Ticketing Offices before receiving actual theatre pass. Lune Production JSC is not responsible for any charges that may be levied by issuing bank.</p>
+                                            <p><strong>Restriction of use</strong></p>
+                                            <p>1) You will not use the online booking facility to make any unauthorized, speculative, false or fraudulent reservation.</p>
+                                            <p>2) You must not:</p>
+                                            <p>(i) Resell the service of the online booking facility; or</p>
+                                            <p>(ii) Use the online booking facility for any activity which breaches any law; or</p>
+                                            <p>(iii) Use the online booking facility in a way which interferes with its availability for other users; or</p>
+                                            <p>(iv) Use other means to transact or obtain information if you are unable to use the online booking facility.</p>
+                                            <p><strong>If Lune Production JSC, in its sole discretion, believes that you are in breach, or will be in breach, of any of these restrictions, reserves its right to cancel your booking without giving you a reason and/or without further reference to you.</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-info form-info--action">
+                                    <div class="form-field form-field--checkbox">
+                                        <label class="item">
+                                            <input type="checkbox" id="agree" name="agree"/>
+                                            <span><span></span>I have read & agreed to the Terms and Conditions.</span>
+                                        </label>
+                                    </div>
+                                    <div class="action-group">
+                                        <button class="button button--bigger" id="btproceed">PAY NOW</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+        <script src="/Scripts/dev/gw_bookingpayment.js"></script>
+
+        <script type="text/javascript" src="/Scripts/libs/TimeCircles.js"></script>
+        <link rel="stylesheet" href="/Content/css/TimeCircles.css">
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="clearfix">
+                <ul class="nav">
+                    <li class="item">
+                        <a href="#">About Show</a>
+                        <ul>
+                            <li><a href="#">A O Show</a></li>
+                            <li><a href="#">My Village</a></li>
+                            <li><a href="#">The Mist</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="#">Customer Service</a>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Term &amp; Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="#">Corporate</a>
+                        <ul>
+                            <li><a href="#">Press &amp; Partnership</a></li>
+                            <li><a href="#">Recruitment</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="info">
+                    <p><a href="/gw/booking.html" class="button button--footer">BUY TICKETS</a></p>
+                    <p><a href="tel:+84 1245 18 11 88" class="phone">+84 1245 18 11 88</a></p>
+                    <p class="social">
+                        <span>&nbsp;<span>FOLLOW</span></span>
+                        <a href="#" class="facebook"></a>
+                        <a href="#" class="instagram"></a>
+                        <a href="#" class="youtube"></a>
+                    </p>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2016 Lune Production</div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script src="/Scripts/guest/global.js"></script>
+<script src="/Scripts/guest/jquery.bpopup.min.js"></script>
+
+
+
+</body>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-16166011-33', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</html>
