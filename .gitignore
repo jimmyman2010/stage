@@ -5,5 +5,5 @@ dist
 node_modules
 bower
 bower_components
-app/css/global.css
+app/css/global*
 *.zip

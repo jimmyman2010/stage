@@ -1,23 +1,23 @@
 .ticket-page{
   .button--home{
     float: left;
-    @include tablet{
-      text-indent: -9999px;
-      width: 34px;
-      overflow: hidden;
-      padding: 0;
-      &:before{
-        left: 8px;
-      }
-    }
+    //@include tablet{
+    //  text-indent: -9999px;
+    //  width: 34px;
+    //  overflow: hidden;
+    //  padding: 0;
+    //  &:before{
+    //    left: 8px;
+    //  }
+    //}
   }
 }
 .step-by-step{
   float: left;
   margin-left: 25px;
-  @include desktop{
-    margin-left: 55px;
-  }
+  //@include desktop{
+  //  margin-left: 55px;
+  //}
   li{
     float: left;
     a{
@@ -26,13 +26,13 @@
       line-height: 41px;
       position: relative;
       font-size: 16px;
-      @include tablet{
-        line-height: 62px;
-      }
-      @include desktop{
-        font-size: 19px;
-        padding: 0 75px;
-      }
+      //@include tablet{
+      //  line-height: 62px;
+      //}
+      //@include desktop{
+      //  font-size: 19px;
+      //  padding: 0 75px;
+      //}
       &:after{
         content: '';
         height: 2px;
@@ -70,39 +70,39 @@
   border: 1px solid #333;
   @include border-radius(5px);
   padding: 10px 15px 15px;
-  max-width: 740px;
+  //max-width: 740px;
   margin:0 auto 20px;
-  @include tablet{
-    padding: 15px 27px 20px;
-  }
+  //@include tablet{
+  //  padding: 15px 27px 20px;
+  //}
 }
 
 .form-field--textarea{
   @include clearfix;
-  @include tablet{
-    .form-label{
-      float: none;
-      width: auto;
-      margin: 0 0 5px;
-    }
-    .input-group{
-      float: none;
-      width: auto;
-      .input-control{
-        width: 100%;
-      }
-    }
-  }
+  //@include tablet{
+  //  .form-label{
+  //    float: none;
+  //    width: auto;
+  //    margin: 0 0 5px;
+  //  }
+  //  .input-group{
+  //    float: none;
+  //    width: auto;
+  //    .input-control{
+  //      width: 100%;
+  //    }
+  //  }
+  //}
 }
 
 .form-info--payment{
   @include clearfix;
   .form-field--radio{
     .item{
-      @include tablet {
-        float: left;
-        width: 33.33%;
-      }
+      //@include tablet {
+      //  float: left;
+      //  width: 33.33%;
+      //}
     }
   }
 }
@@ -110,10 +110,10 @@
 .form-info--survey{
   .form-field--radio{
     .item{
-      @include tablet {
-        float: left;
-        width: 50%;
-      }
+      //@include tablet {
+      //  float: left;
+      //  width: 50%;
+      //}
     }
   }
 }
@@ -121,7 +121,7 @@
 .form-info--general{
   border: none;
   padding: 0;
-  max-width: 552px;
+  //max-width: 552px;
 }
 
 .form-info--term{
@@ -170,24 +170,24 @@
     bottom: -8px;
     right: -9px;
   }
-  @include tablet{
-    font-size: 19px;
-    &:after{
-      bottom: -11px;
-      right: -14px;
-    }
-  }
+  //@include tablet{
+  //  font-size: 19px;
+  //  &:after{
+  //    bottom: -11px;
+  //    right: -14px;
+  //  }
+  //}
 }
 
 
 .booking-info{
-  max-width: 945px;
+  //max-width: 945px;
   margin: 0 auto;
   .action-group{
     margin: 30px 0 20px;
-    @include desktop {
-      margin-bottom: 50px;
-    }
+    //@include desktop {
+    //  margin-bottom: 50px;
+    //}
   }
 }
 
@@ -198,38 +198,38 @@
   background: rgba(#000000, 0.8);
   padding: 5px 10px;
   font-size: 13px;
-  @include tablet{
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  @include desktop{
-    max-width: 848px;
-  }
+  //@include tablet{
+  //  padding: 10px 20px;
+  //  font-size: 14px;
+  //}
+  //@include desktop{
+  //  max-width: 848px;
+  //}
   .booking-summary--name{
-    @include tablet {
-      float: left;
-      width: percentage(475/848);
-      .label {
-        width: 100px;
-      }
-      .value {
-        width: 341px;
-      }
-    }
+    //@include tablet {
+    //  float: left;
+    //  width: percentage(475/848);
+    //  .label {
+    //    width: 100px;
+    //  }
+    //  .value {
+    //    width: 341px;
+    //  }
+    //}
   }
   .booking-summary--selected{
     border-top: 1px solid #3f3c35;
-    @include tablet {
-      border-top: none;
-      float: right;
-      width: percentage(340/848);
-      .label {
-        width: 86px;
-      }
-      .value {
-        width: 230px;
-      }
-    }
+    //@include tablet {
+    //  border-top: none;
+    //  float: right;
+    //  width: percentage(340/848);
+    //  .label {
+    //    width: 86px;
+    //  }
+    //  .value {
+    //    width: 230px;
+    //  }
+    //}
   }
   p{
     border-top: 1px solid #3f3c35;
@@ -267,9 +267,9 @@
 .payment-info{
   font-size: 16px;
   margin: 30px 0;
-  @include tablet{
-    font-size: 18px;
-  }
+  //@include tablet{
+  //  font-size: 18px;
+  //}
   table{
     border-collapse: collapse;
   }
@@ -279,9 +279,9 @@
   th{
     font-weight: 700;
     font-size: 14px;
-    @include tablet {
-      font-size: 16px;
-    }
+    //@include tablet {
+    //  font-size: 16px;
+    //}
   }
   .border-double{
     border-bottom: 2px solid #333;
@@ -294,42 +294,32 @@
   }
   .bigger{
     font-size: 18px;
-    @include tablet {
-      font-size: 22px;
-    }
+    //@include tablet {
+    //  font-size: 22px;
+    //}
   }
 }
 
 table{
   &.mobile{
-    @include tablet{
-      display: none;
-    }
+    //@include tablet{
+    //  display: none;
+    //}
   }
   &.tablet{
     display: none;
-    @include tablet{
-      display: table;
-    }
-  }
-}
-
-.module--confirm-booking,
-.module--buy-tickets{
-  header{
-    display: none;
-    @include tablet{
-      display: block;
-    }
+    //@include tablet{
+    //  display: table;
+    //}
   }
 }
 
 .step{
   text-align: center;
   padding: 20px;
-  @include tablet{
-    display: none;
-  }
+  //@include tablet{
+  //  display: none;
+  //}
   .inner{
     display: inline-block;
     span {
@@ -350,26 +340,26 @@ table{
 .module--select-show{
   header .step-by-step{
     display: none;
-    @include tablet{
-      display: block;
-    }
+    //@include tablet{
+    //  display: block;
+    //}
   }
   .module--content .container{
     padding: 0 0 20px;
-    @include tablet{
-      padding: 20px 0 50px;
-    }
+    //@include tablet{
+    //  padding: 20px 0 50px;
+    //}
   }
 }
 
 .bamboo-box{
-  @include tablet{
-    background: image_url('bamboo-box.png') no-repeat;
-    max-width: 556px;
-    min-height: 187px;
-    margin: 0 auto;
-    padding: 58px 98px 0;
-  }
+  //@include tablet{
+  //  background: image_url('bamboo-box.png') no-repeat;
+  //  max-width: 556px;
+  //  min-height: 187px;
+  //  margin: 0 auto;
+  //  padding: 58px 98px 0;
+  //}
   .form-field .input-group{
     width: auto;
     float: none;
@@ -387,10 +377,10 @@ table{
   position: relative;
   font-size: 16px;
   line-height: 30px;
-  @include tablet{
-    font-size: 22px;
-    line-height: 40px;
-  }
+  //@include tablet{
+  //  font-size: 22px;
+  //  line-height: 40px;
+  //}
   a{
     display: block;
     width: 50px;
@@ -403,18 +393,18 @@ table{
       left: 50%;
       top: 50%;
       margin: -5px 0 0 -3px;
-      @include tablet{
-        margin: -10px 0 0 -5px;;
-      }
+      //@include tablet{
+      //  margin: -10px 0 0 -5px;;
+      //}
     }
     &:hover{
       background-color: #93785c;
     }
 
-    @include tablet{
-      width: 160px;
-      height: 40px;
-    }
+    //@include tablet{
+    //  width: 160px;
+    //  height: 40px;
+    //}
   }
   .prev{
     left: 0;
@@ -446,9 +436,9 @@ table{
   display: none;
   @include clearfix;
   font-size: 18px;
-  @include desktop{
-    display: block;
-  }
+  //@include desktop{
+  //  display: block;
+  //}
   li{
     float: left;
     width: percentage(1/7);
@@ -461,24 +451,24 @@ table{
   border-bottom: 1px solid #333;
   font-size: 13px;
   @include clearfix;
-  @include desktop{
-    font-size: 18px;
-  }
+  //@include desktop{
+  //  font-size: 18px;
+  //}
   .calender--date{
     border-top: 1px solid #333;
     border-left: 1px solid #333;
     padding: 0 5px 10px 64px;
     position: relative;
     min-height: 70px;
-    @include desktop {
-      padding: 26px 10px 10px 40px;
-      float: left;
-      width: percentage(1/7);
-      min-height: 110px;
-      &:nth-child(7n+1) {
-        clear: left;
-      }
-    }
+    //@include desktop {
+    //  padding: 26px 10px 10px 40px;
+    //  float: left;
+    //  width: percentage(1/7);
+    //  min-height: 110px;
+    //  &:nth-child(7n+1) {
+    //    clear: left;
+    //  }
+    //}
     .date{
       border-right: 1px solid #333;
       border-bottom: 1px solid #333;
@@ -488,17 +478,17 @@ table{
       left: 0;
       width: 50px;
       padding: 5px 0;
-      @include desktop{
-        padding: 0;
-        height: 36px;
-        line-height: 36px;
-        width: 36px;
-      }
+      //@include desktop{
+      //  padding: 0;
+      //  height: 36px;
+      //  line-height: 36px;
+      //  width: 36px;
+      //}
       .weekday{
         display: block;
-        @include desktop{
-          display: none;
-        }
+        //@include desktop{
+        //  display: none;
+        //}
       }
     }
 
@@ -510,10 +500,10 @@ table{
     li{
       float: left;
       margin-right: 30px;
-      @include desktop{
-        float: none;
-        margin-right: 0;
-      }
+      //@include desktop{
+      //  float: none;
+      //  margin-right: 0;
+      //}
       h4{
         margin: 10px 0 0;
         font-size: 16px;
@@ -628,25 +618,25 @@ table{
   }
 
   .calender--date--has-show{
-    @include desktop{
-      &:hover {
-        background-color: #93785c;
-        color: white;
-      }
-    }
+    //@include desktop{
+    //  &:hover {
+    //    background-color: #93785c;
+    //    color: white;
+    //  }
+    //}
   }
 
   .calender--date--other{
     display: none;
-    @include desktop{
-      display: block;
-    }
+    //@include desktop{
+    //  display: block;
+    //}
   }
   .calender--date--no-show{
     display: none;
-    @include tablet{
-      display: block;
-    }
+    //@include tablet{
+    //  display: block;
+    //}
   }
 }
 
@@ -656,59 +646,59 @@ table{
     background: white;
     .container{
       padding: 0 0 20px;
-      @include desktop {
-        position: relative;
-      }
+      //@include desktop {
+      //  position: relative;
+      //}
     }
   }
   header{
-    display: none;
-    @include tablet{
-      display: block;
-    }
+    //display: none;
+    //@include tablet{
+    //  display: block;
+    //}
   }
 
   .stage-zone{
     padding: 20px 0;
     text-align: center;
-    @include desktop{
-      padding-top: 80px;
-    }
+    //@include desktop{
+    //  padding-top: 80px;
+    //}
     .inner{
       position: relative;
-      @include tablet{
-        padding-top: 150px;
-      }
+      //@include tablet{
+      //  padding-top: 150px;
+      //}
     }
     .legend{
-      @include tablet {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
+      //@include tablet {
+      //  position: absolute;
+      //  top: 0;
+      //  left: 0;
+      //}
     }
     .seat-status{
       margin-top: 20px;
-      @include tablet {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-top: 0;
-      }
+      //@include tablet {
+      //  position: absolute;
+      //  top: 0;
+      //  right: 0;
+      //  margin-top: 0;
+      //}
     }
     .stage{
       margin-top: 20px;
-      @include tablet{
-        margin-top: 0;
-      }
+      //@include tablet{
+      //  margin-top: 0;
+      //}
     }
   }
 
   .stage-zone--saigon{
     .inner{
-      @include tablet{
-        padding-top: 50px;
-      }
+      //@include tablet{
+      //  padding-top: 50px;
+      //}
     }
   }
 
@@ -716,11 +706,11 @@ table{
     background: image_url('bg-module.jpg');
     background-size: 100px;
     margin: 0;
-    @include desktop{
-      background-size: 200px;
-      max-width: 556px;
-      margin-left: 48px;
-    }
+    //@include desktop{
+    //  background-size: 200px;
+    //  max-width: 556px;
+    //  margin-left: 48px;
+    //}
   }
   .booking-summary .booking-summary--name{
     float: none;
@@ -728,11 +718,11 @@ table{
   }
 
   .booking-info--selecting{
-    @include desktop{
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+    //@include desktop{
+    //  position: absolute;
+    //  top: 0;
+    //  right: 0;
+    //}
     .booking-summary{
       background: none;
       color: #333;
@@ -745,32 +735,32 @@ table{
       font-size: 18px;
       font-weight: 700;
       margin: 10px 0 5px;
-      @include tablet{
-        font-size: 20px;
-        float: left;
-        width: 40%;
-      }
-      @include desktop {
-        width: 180px;
-      }
+      //@include tablet{
+      //  font-size: 20px;
+      //  float: left;
+      //  width: 40%;
+      //}
+      //@include desktop {
+      //  width: 180px;
+      //}
       span{
-        @include desktop {
-          display: block;
-        }
+        //@include desktop {
+        //  display: block;
+        //}
         color: #a96929;
         text-transform: uppercase;
       }
     }
     .booking-summary--selecting{
       font-size: 14px;
-      @include tablet{
-        font-size: 15px;
-        float: right;
-        width: 60%;
-      }
-      @include desktop {
-        width: 320px;
-      }
+      //@include tablet{
+      //  font-size: 15px;
+      //  float: right;
+      //  width: 60%;
+      //}
+      //@include desktop {
+      //  width: 320px;
+      //}
       .color, .value{
         color: #a96929;
         font-weight: 700;
@@ -787,75 +777,31 @@ table{
       border-top: 1px solid #333;
       margin-top: 10px;
       padding-top: 10px;
-      @include tablet{
-        border-top: none;
-        margin-top: 0;
-        padding-top: 0;
-        text-align: left;
-      }
+      //@include tablet{
+      //  border-top: none;
+      //  margin-top: 0;
+      //  padding-top: 0;
+      //  text-align: left;
+      //}
     }
     .form-label{
-      @include tablet {
-        width: 285px;
-      }
+      //@include tablet {
+      //  width: 285px;
+      //}
     }
     .input-group{
       width: 100px;
       margin: 5px auto 0;
-      @include tablet {
-        margin: 10px 0 0;
-      }
+      //@include tablet {
+      //  margin: 10px 0 0;
+      //}
     }
 
     .action-group{
       margin: 10px 0;
-      @include tablet{
-        margin: 5px 0;
-      }
+      //@include tablet{
+      //  margin: 5px 0;
+      //}
     }
   }
-}
-
-@media screen and (min-width: 768px) {
-  .module{
-    padding-top: 62px;
-    header .step-by-step{
-      display: block;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .module--booking{
-    padding-top: 200px;
-    background: white;
-    .booking-info{
-      position: fixed;
-      top: 62px;
-      right: 50%;
-      margin-left: 0;
-      z-index: 99;
-      width: 500px;
-    }
-    .booking-info--selecting{
-      right: auto;
-      left: 50%;
-      h3{
-        width: 133px;
-      }
-    }
-  }
-
-}
-
-@media screen and (min-width: 1200px) {
-  .module--booking {
-    .booking-info {
-      width: 560px;
-    }
-    .booking-info--selecting h3{
-      width: 180px;
-    }
-  }
-
 }

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <include src="inc/mobile.meta.html">Payment Message</include>
+</head>
+<body>
+<div class="site-container">
+    <include src="inc/header.html"></include>
+
+    <main class="ticket-page" role="main">
+
+        <section class="module module--buy-tickets">
+            <header>
+                <div class="container">
+                    <a href="#" class="button button--home">BACK TO HOMEPAGE</a>
+                    <ul class="step-by-step">
+                        <li><a href="javascript:void(0);">1. Select Show</a></li>
+                        <li><a href="javascript:void(0);">2. Select Tickets</a></li>
+                        <li class="active"><a href="javascript:void(0);">3. Buy Tickets</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="module--content">
+                <div class="container">
+                    <div class="step">
+                        <div class="inner">
+                            <span>
+                                3. <br/> Buy Tickets
+                            </span>
+                        </div>
+                    </div>
+                    <fieldset class="site-form">
+                        <form id="submitPayment">
+                        <div class="form-info form-info--general">
+                            <div class="form-field">
+                                <label class="form-label">Full Name <span>*</span></label>
+                                <div class="input-group">
+                                    <input type="text" name="full-name" class="input-control required"/>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label">Email <span>*</span></label>
+                                <div class="input-group">
+                                    <input type="text" name="email" class="input-control required email"/>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label">Confirm Email <span>*</span></label>
+                                <div class="input-group">
+                                    <input type="text" name="confirmEmail" class="input-control required email"/>
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="form-field form-field--half">
+                                    <label class="form-label">Phone <span>*</span></label>
+                                    <div class="input-group">
+                                        <input type="text" name="phone" class="input-control required"/>
+                                    </div>
+                                </div>
+                                <div class="form-field form-field--half last">
+                                    <label class="form-label">Nationality <span>*</span></label>
+                                    <div class="input-group required">
+                                        <select name="nationality" class="input-control">
+                                            <option value=""></option>
+                                            <option value="vi">Vietnamese</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-info form-info--payment">
+                            <h4 class="form-info--header">Payment Method <span>*</span></h4>
+                            <div class="form-info--content">
+                                <div class="form-field form-field--radio">
+                                    <label class="item">
+                                        <input type="radio" name="card"/>
+                                        <span><span></span>Credit Card</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="card"/>
+                                        <span><span></span>Paypal Account</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="card"/>
+                                        <span><span></span>ATM Card via OnePay</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="card"/>
+                                        <span><span></span>Credit Card via OnePay</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="card"/>
+                                        <span><span></span>Credit Card via Paypal</span>
+                                    </label>
+                                </div>
+                                <div class="form-field form-field--textarea">
+                                    <label class="form-label">Special Request</label>
+                                    <div class="input-group">
+                                        <textarea class="input-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-info form-info--survey">
+                            <h4 class="form-info--header">How do you know about our show?</h4>
+                            <div class="form-info--content">
+                                <div class="form-field form-field--radio">
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Trip Advisor</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Friends' Recommendation</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Online Search</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Tour Guide's Recommendation</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Travel Agency</span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Online travel websites / communities </span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Newspapers / Magazines </span>
+                                    </label>
+                                    <label class="item">
+                                        <input type="radio" name="survey"/>
+                                        <span><span></span>Others (please specify) </span>
+                                        <div class="input-group">
+                                            <input type="text" class="input-control"/>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-info form-info--term">
+                            <div class="form-info--content">
+                                <div class="scroll">
+                                    <p><strong>Online Ticket Payment- Terms & Conditions</strong></p>
+                                    <br/>
+                                    <p>Please take time to read and understand our Terms and Conditions before accessing online ticket payment. By using this website, you agreed to terms and conditions set forth in this document. All terms and conditions are subjected to change from time to time, while their validation is limited at the time of reading. We always expect to deliver the excellent entertainment at the best quality service. The list below is a few guides for online ticket payment.</p>
+                                    <p><strong>1.Subjects of application</strong></p>
+                                    <p>This online payment feature only applies for our assigned shows. Our online membership registration is free of charge. Each online transaction is limited to 8 tickets in maximum. If the number of tickets exceeding maximum permitted per transaction, please contact ……………….. or email to ………………….</p>
+                                    <p><strong>2.	Refunds, cancellation and exchanges</strong></p>
+                                    <p>At the moment of reading, there will no available services for cancellation/return/refund or editing tickets information after successful online payment. We only accept to refund in the condition that booking system history does not indicate customer’s orders while customer’ banking account received a deduce amount through our booking systems, and there was no booking confirmation that is sent to customer. Regarding refunds, please contact us by …….</p>
+                                    <p><strong>1.Subjects of application</strong></p>
+                                    <p>This online payment feature only applies for our assigned shows. Our online membership registration is free of charge. Each online transaction is limited to 8 tickets in maximum. If the number of tickets exceeding maximum permitted per transaction, please contact ……………….. or email to ………………….</p>
+                                    <p><strong>2.	Refunds, cancellation and exchanges</strong></p>
+                                    <p>At the moment of reading, there will no available services for cancellation/return/refund or editing tickets information after successful online payment. We only accept to refund in the condition that booking system history does not indicate customer’s orders while customer’ banking account received a deduce amount through our booking systems, and there was no booking confirmation that is sent to customer. Regarding refunds, please contact us by …….</p>
+                                    <p><strong>1.Subjects of application</strong></p>
+                                    <p>This online payment feature only applies for our assigned shows. Our online membership registration is free of charge. Each online transaction is limited to 8 tickets in maximum. If the number of tickets exceeding maximum permitted per transaction, please contact ……………….. or email to ………………….</p>
+                                    <p><strong>2.	Refunds, cancellation and exchanges</strong></p>
+                                    <p>At the moment of reading, there will no available services for cancellation/return/refund or editing tickets information after successful online payment. We only accept to refund in the condition that booking system history does not indicate customer’s orders while customer’ banking account received a deduce amount through our booking systems, and there was no booking confirmation that is sent to customer. Regarding refunds, please contact us by …….</p>
+                                    <p><strong>1.Subjects of application</strong></p>
+                                    <p>This online payment feature only applies for our assigned shows. Our online membership registration is free of charge. Each online transaction is limited to 8 tickets in maximum. If the number of tickets exceeding maximum permitted per transaction, please contact ……………….. or email to ………………….</p>
+                                    <p><strong>2.	Refunds, cancellation and exchanges</strong></p>
+                                    <p>At the moment of reading, there will no available services for cancellation/return/refund or editing tickets information after successful online payment. We only accept to refund in the condition that booking system history does not indicate customer’s orders while customer’ banking account received a deduce amount through our booking systems, and there was no booking confirmation that is sent to customer. Regarding refunds, please contact us by …….</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-info form-info--action">
+                            <div class="form-field form-field--checkbox">
+                                <label class="item">
+                                    <input type="checkbox" name="agree"/>
+                                    <span><span></span>I have read & agreed to the <a href="javascript:void(0);">Terms and Conditions.</a></span>
+                                </label>
+                            </div>
+                            <div class="action-group">
+                                <button class="button button--bigger">PAY NOW</button>
+                            </div>
+                        </div>
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <include src="inc/footer.html"></include>
+</div>
+
+<include src="inc/scripts.html"></include>
+
+</body>
+</html>

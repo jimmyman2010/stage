@@ -1,9 +1,9 @@
 .module{
     @include clearfix;
     padding-top: 41px;
-    @include tablet{
-        padding-top: 62px;
-    }
+    //@include tablet{
+    //    padding-top: 62px;
+    //}
     header{
         background-color: #000;
         height: 41px;
@@ -12,12 +12,15 @@
         left: 0;
         top: 0;
         z-index: 100;
-        @include tablet{
-            height: 62px;
-        }
+        //@include tablet{
+        //    height: 62px;
+        //}
         .container{
             position: relative;
         }
+    }
+    .step-by-step{
+        display: none;
     }
     .countdown{
         text-align: right;
@@ -26,16 +29,15 @@
         top: 2px;
     }
 }
-
 .module--content{
     color: #333;
 
     border-bottom: 4px solid #6e953b;
     min-height: 400px;
 
-    @include tablet{
-        min-height: 500px;
-    }
+    //@include tablet{
+    //    background-size: auto;
+    //}
 }
 
 .button{

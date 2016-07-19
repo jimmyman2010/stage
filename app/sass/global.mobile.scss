@@ -1,0 +1,60 @@
+@import "compass/css3";
+
+@import "compass/utilities/sprites";
+
+@import "global/common";
+@import "fontface";
+@import "variables";
+@import "mixin";
+@import "reset";
+
+/* global */
+@import "global/mobile.retina-sprites";
+//@import "global/retina-background-image";
+@import "global/mobile.form";
+
+body{
+    font-family: $font-lato;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    background: image_url('bg-module.jpg');
+    background-size: 100px;
+    //@include tablet{
+    //    font-size: 14px;
+    //}
+}
+
+.clearfix{
+    @include clearfix;
+}
+
+.container{
+    //max-width: 960px;
+    margin-left: 10px;
+    margin-right: 10px;
+    //@include desktop{
+    //    max-width: 1144px;
+    //}
+    //@include large{
+    //    margin-left: auto;
+    //    margin-right: auto;
+    //}
+}
+
+
+/* partials */
+@import "partials/mobile.header";
+@import "partials/mobile.footer";
+@import "partials/mobile.popup";
+@import "partials/mobile.countdown";
+
+//@import "animate";
+
+/* plugins */
+
+/* page */
+@import "pages/mobile.page";
+@import "pages/mobile.ticket";
+@import "pages/mobile.message";

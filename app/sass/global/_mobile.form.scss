@@ -1,0 +1,237 @@
+.form-field {
+    padding-bottom: 5px;
+    font-size: 14px;
+    //@include tablet {
+    //    @include clearfix;
+    //    font-size: 15px;
+    //}
+    .form-label{
+        font-family: $font-lato;
+        margin: 0 0 5px;
+        display: inline-block;
+        span{
+            color: #fa2e23;
+        }
+        //@include tablet{
+        //    margin: 5px 0 0;
+        //    float: left;
+        //    width: 127px;
+        //}
+    }
+    .input-group{
+        position: relative;
+        //@include tablet{
+        //    float: left;
+        //    width: 423px;
+        //}
+        .input-control {
+            border:1px solid #333;
+            background: none;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 10px;
+            margin: 0;
+            width: 100%;
+            outline: none;
+            font-family: $font-lato;
+            font-size: 15px;
+            color: #333;
+        }
+        textarea.input-control{
+            height: 100px;
+        }
+        select.input-control{
+            padding: 0 35px 0 5px;
+            background: image_url('select.png') no-repeat right top;
+            cursor: pointer;
+        }
+    }
+    label.error{
+        color: #ff0000;
+    }
+}
+
+.form-field--half{
+    //@include tablet {
+    //    float: left;
+    //    width: 50%;
+    //    .input-group{
+    //        width: 147px;
+    //    }
+    //    &.last{
+    //        .form-label{
+    //            text-align: right;
+    //            padding-right: 10px;
+    //        }
+    //    }
+    //}
+}
+
+.form-field--radio{
+    .item{
+        display: block;
+        margin: 10px 0;
+        cursor: pointer;
+        //@include tablet{
+        //    margin: 7px 0;
+        //}
+        input[type="radio"]{
+            visibility: hidden;
+            position: absolute;
+            &:checked + span span{
+                @include use-sprite('radio-checked');
+            }
+        }
+        span{
+            position: relative;
+            padding-left: 20px;
+            //@include tablet{
+            //    padding-left: 28px;
+            //}
+            span{
+                @include use-sprite('radio');
+                position: absolute;
+                left: 0;
+                top: 3px;
+                //@include tablet{
+                //    top: -1px;
+                //}
+            }
+        }
+
+        .input-group{
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+}
+
+.form-field--checkbox{
+    .item{
+        margin: 7px 0;
+        cursor: pointer;
+        input[type="checkbox"]{
+            visibility: hidden;
+            position: absolute;
+            &:checked + span span{
+                @include use-sprite('checkbox-checked');
+            }
+        }
+        span{
+            position: relative;
+            padding-left: 24px;
+            font-style: italic;
+            //@include tablet{
+            //    padding-left: 28px;
+            //}
+            span{
+                @include use-sprite('checkbox');
+                position: absolute;
+                left: 0;
+                top: -1px;
+            }
+        }
+
+        .input-group{
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        a{
+            color:#6e953b;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.action-group{
+    text-align: center;
+    margin: 20px 0 10px;
+}
+.button{
+    display: inline-block;
+    outline: none;
+    border: 1px solid #333;
+    background: none;
+    color: #333;
+    height: 35px;
+    line-height: 35px;
+    font-size: 13px;
+    padding: 0 40px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    @include border-radius(30px);
+    @include transition(color 0.3s, background-color 0.3s, border-color 0.3s);
+    //@include tablet{
+    //    width: auto;
+    //    padding: 0 75px;
+    //}
+    &:hover{
+        color: #fff;
+        background-color: #6e953b;
+        border-color: #6e953b;
+    }
+}
+
+.button--close{
+    border: 1px solid #8dc63f;
+    color: #8dc63f;
+}
+
+.button--bigger{
+    //@include tablet {
+    //    height: 40px;
+    //    line-height: 40px;
+    //}
+}
+
+.button--footer{
+    border: 1px solid #8dc63f;
+    background: #000;
+    color: #8dc63f;
+    //@include tablet{
+    //    height: 28px;
+    //    line-height: 28px;
+    //    font-size: 14px;
+    //    padding: 0 40px;
+    //}
+}
+
+.button--home{
+    margin-top: 5px;
+    color: #d2b58d;
+    border-color: #d2b58d;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    padding: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+    &:before{
+        content: '';
+        @include use-sprite('home');
+        position: absolute;
+        left: 6px;
+        top: 6px;
+    }
+    &:hover{
+        color: #8dc63f;
+        border-color: #8dc63f;
+        background-color: transparent;
+    }
+    //@include tablet{
+    //    margin-top: 14px;
+    //    height: 34px;
+    //    width: auto;
+    //    line-height: 34px;
+    //    padding: 0 20px 0 46px;
+    //    text-indent: 0;
+    //    &:before{
+    //        left: 18px;
+    //    }
+    //}
+}

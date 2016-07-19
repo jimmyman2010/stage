@@ -1,0 +1,54 @@
+/*!
+ * jQuery ClassyCountdown
+ * www.class.pm
+ *
+ * Written by Marius Stanciu - Sergiu <marius@class.pm>
+ * Licensed under the MIT license www.class.pm/LICENSE-MIT
+ * Version 1.0.0
+ *
+ */
+
+.ClassyCountdown-wrapper > div {
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    margin: 4px;
+    //@include tablet{
+    //    width: 52px;
+    //}
+}
+
+.ClassyCountdown-wrapper canvas{
+    display: none;
+    //@include tablet{
+    //    display: block;
+    //}
+}
+
+.ClassyCountdown-wrapper .ClassyCountdown-value {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: block;
+    font-size: 18px !important;
+    color: #ac9473;
+    margin: 0 !important;
+    line-height: 1;
+    div{
+        color: #8dc63f;
+    }
+    span{
+        display: block;
+        font-size: 10px !important;
+    }
+    //@include tablet{
+    //    padding: 8px;
+    //    font-size: 22px !important;
+    //}
+}
+
+.ClassyCountdown-days{
+    display: none !important;
+}

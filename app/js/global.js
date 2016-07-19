@@ -133,26 +133,10 @@ var STAG = (function(){
                 maintenance.find('.module--content').height(method.windowWidthHeight().height - 4);
             }
         },
-        floatingSelecting: function(){
-            var selecting = $('.booking-info--selecting');
-            if(selecting.length > 0){
-                var topSelect = selecting.offset().top;
-                $(window).on('load scroll resize', function(){
-                    var topWin = $(window).scrollTop();
-                    var scroll = (topWin - topSelect) + $('.module header').height();
-                    if(scroll > 0){
-                        selecting.css({'top': scroll + 'px', 'z-index': 99});
-                    } else {
-                        selecting.removeAttr('style');
-                    }
-                });
-            }
-        },
         init: function () {
             method.ticketPage();
             method.countdown();
             method.maintenance();
-            method.floatingSelecting();
         }
     };
     return {

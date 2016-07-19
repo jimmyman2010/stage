@@ -19,9 +19,14 @@ body{
     font-size: 12px;
     margin: 0;
     padding: 0;
+    background: image_url('bg-module.jpg');
     @include tablet{
         font-size: 14px;
     }
+}
+
+.site-container{
+    min-width: 1164px;
 }
 
 .clearfix{
@@ -29,11 +34,11 @@ body{
 }
 
 .container{
-    max-width: 960px;
+    max-width: 1144px;
     margin-left: 10px;
     margin-right: 10px;
     @include desktop{
-        max-width: 1144px;
+        min-width: 1144px;
     }
     @include large{
         margin-left: auto;
