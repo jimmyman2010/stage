@@ -30,6 +30,32 @@ var STAG = (function(){
                 $.magnificPopup.close();
             });
         },
+        showGuidelinePopup: function(){
+            'use strict';
+            $.magnificPopup.open({
+                items: {
+                    src: $('#guidelinePopup')
+                },
+                type: 'inline',
+
+                fixedContentPos: true,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in my-mfp-zoom-in-transparent'
+            });
+
+            $(document).on('click', '.button--close', function (e) {
+                e.preventDefault();
+                $.magnificPopup.close();
+            });
+        },
         ticketPage: function () {
             var ticket = $('.ticket-page');
             if(ticket.length > 0){
@@ -141,7 +167,8 @@ var STAG = (function(){
     };
     return {
         init: method.init,
-        showNoticePopup: method.showNoticePopup
+        showNoticePopup: method.showNoticePopup,
+        showGuidelinePopup: method.showGuidelinePopup
     }
 })();
 
@@ -149,5 +176,6 @@ var STAG = (function(){
 $(function(){
     'use strict';
     STAG.init();
-     //STAG.showNoticePopup();
+    //STAG.showNoticePopup();
+    STAG.showGuidelinePopup();
 });
